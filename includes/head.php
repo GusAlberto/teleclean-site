@@ -1,6 +1,6 @@
 <?php
 $pageTitle = $pageTitle ?? 'TeleClean';
-$pageDescription = $pageDescription ?? 'Estética automotiva premium em Belo Horizonte.';
+$pageDescription = $pageDescription ?? 'Tele Clean Detail | Estetica Automotiva em Belo Horizonte. Especialistas em polimento tecnico, vitrificacao e detalhamento automotivo.';
 $canonicalUrl = $canonicalUrl ?? 'https://www.teleclean.com.br/';
 $ogImage = $ogImage ?? 'assets/img/og-cover.jpg';
 ?>
@@ -39,51 +39,31 @@ $ogImage = $ogImage ?? 'assets/img/og-cover.jpg';
       "name": "TeleClean",
       "image": "https://www.teleclean.com.br/assets/img/og-cover.jpg",
       "url": "https://www.teleclean.com.br/",
-      "telephone": "+55 31 99999-9999",
+      "telephone": "+55 31 3568-3754",
       "priceRange": "$$$",
-      "description": "Empresa de estética automotiva premium em Belo Horizonte com foco em lavagem técnica, higienização, polimento e proteção veicular.",
+      "description": "Tele Clean Detail | Estetica Automotiva. Especialistas em polimento tecnico, vitrificacao e detalhamento automotivo em Belo Horizonte.",
+      "email": "contato@teleclean.com.br",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Av. Raja Gabáglia, 2450",
+        "streetAddress": "Rua Benjamim Flores, 170 - Santo Antonio",
         "addressLocality": "Belo Horizonte",
         "addressRegion": "MG",
-        "postalCode": "30494-170",
         "addressCountry": "BR"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -19.9526,
-        "longitude": -43.9654
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-          "opens": "08:00",
-          "closes": "18:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "08:00",
-          "closes": "13:00"
-        }
-      ],
+      "openingHours": "Mo-Sa 08:00-18:00",
       "sameAs": [
-        "https://www.instagram.com/teleclean",
-        "https://www.facebook.com/teleclean"
+        "https://www.instagram.com/teleclean_/"
       ],
-      "areaServed": "Belo Horizonte e região",
+      "areaServed": "Belo Horizonte e regiao metropolitana",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Serviços de estética automotiva",
+        "name": "Servicos de estetica automotiva",
         "itemListElement": [
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Lavagem técnica"}},
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Higienização interna"}},
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Polimento técnico"}},
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cristalização"}},
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Vitrificação"}},
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Detalhamento completo"}}
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Polimento tecnico"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Vitrificacao"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Detalhamento automotivo"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Higienizacao interna"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Lavagem tecnica"}}
         ]
       }
     }

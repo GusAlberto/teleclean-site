@@ -1,6 +1,6 @@
 <?php
-$pageTitle = 'Estética Automotiva Premium em Belo Horizonte | TeleClean';
-$pageDescription = 'Estética automotiva premium em Belo Horizonte com lavagem técnica, higienização, polimento, vitrificação e atendimento com hora marcada. Solicite seu orçamento pelo WhatsApp.';
+$pageTitle = 'Tele Clean Detail | Estetica Automotiva em Belo Horizonte';
+$pageDescription = 'Tele Clean Detail | Estetica Automotiva. Especialistas em polimento tecnico, vitrificacao e detalhamento automotivo em Belo Horizonte. Fale no WhatsApp e solicite seu orcamento.';
 $canonicalUrl = 'https://www.teleclean.com.br/';
 $ogImage = 'assets/img/og-cover.jpg';
 include __DIR__ . '/includes/head.php';
@@ -16,6 +16,9 @@ include __DIR__ . '/includes/head.php';
         </video>
         <div class="hero__overlay" aria-hidden="true"></div>
         <div class="container hero__content">
+            <div class="eyebrow reveal">Tele Clean Detail | Estetica Automotiva</div>
+            <h1 class="reveal">Polimento tecnico, vitrificação e detalhamento para deixar seu carro com acabamento de alto nivel.</h1>
+            <p class="hero__text reveal">A TeleClean atende em Belo Horizonte com processo técnico, transparência no diagnostico e foco total em resultado visual. Seu veiculo sai com mais brilho, protecao e valor percebido.</p>
             <div class="eyebrow reveal">Cuidado técnico • acabamento premium • atendimento local</div>
             <h1 class="reveal">Estética automotiva premium para quem valoriza cada detalhe do veículo.</h1>
             <p class="hero__text reveal">Lavagem técnica, higienização, polimento e proteção com padrão profissional, processo cuidadoso e atendimento com hora marcada em Belo Horizonte.</p>
@@ -294,8 +297,14 @@ include __DIR__ . '/includes/head.php';
         <div class="container cta-section__inner reveal">
             <div>
                 <span class="section__eyebrow">Orçamento e agendamento</span>
-                <h2>Seu veículo merece um cuidado à altura da apresentação que você quer manter.</h2>
-                <p>Envie fotos, modelo e o tipo de resultado esperado. A equipe responde com indicação técnica e proposta objetiva.</p>
+                <h2>Seu veiculo pode ter brilho de vitrine, protecao duradoura e acabamento que chama atencao.</h2>
+                <p>Envie fotos no WhatsApp e receba uma avaliacao tecnica da TeleClean com orientacao clara do melhor pacote para o seu objetivo.</p>
+                <ul class="cta-section__meta" role="list">
+                    <li><strong>Telefone e WhatsApp:</strong> (31) 3568-3754</li>
+                    <li><strong>E-mail:</strong> contato@teleclean.com.br</li>
+                    <li><strong>PIX da empresa:</strong> contato@teleclean.com.br</li>
+                    <li><strong>Checkout:</strong> ainda a definir</li>
+                </ul>
             </div>
             <div class="cta-section__actions">
                 <a class="btn btn--primary" href="https://wa.me/553135683754?text=Ol%C3%A1%2C%20quero%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
