@@ -112,3 +112,49 @@ if (accordion) {
     });
   });
 }
+
+// Smooth-scroll navigation handling
+(function(){
+  function findTarget(hash){
+    if(!hash) return null;
+    const id = hash.replace('#','');
+    return document.getElementById(id) || document.querySelector(`[name="${id}"]`);
+  }
+
+  function smoothScrollToHash(hash){
+    const target = findTarget(hash);
+    if(target){
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // set focus for accessibility
+      try{ target.focus({preventScroll:true}); }catch(e){}
+    }
+  }
+
+  // If the page loaded with a hash, avoid the instant jump and perform a smooth scroll
+  if(window.location.hash){
+    // ensure page starts at top then smooth scroll after paint
+    window.scrollTo(0,0);
+    window.addEventListener('load', ()=>{
+      // small delay to allow styles/layout
+      setTimeout(()=> smoothScrollToHash(window.location.hash), 60);
+    });
+  }
+
+  // Intercept in-page anchor clicks to perform smooth scroll without reloading when already on root
+  document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach((link)=>{
+    link.addEventListener('click', (e)=>{
+      const href = link.getAttribute('href');
+      const hashIndex = href.indexOf('#');
+      if(hashIndex === -1) return;
+      const hash = href.slice(hashIndex);
+      // If current path is root or index, do an in-page smooth scroll
+      const path = window.location.pathname.replace(/index\.php$/,'/') || '/';
+      if(path === '/' || path === '/index.php' || path === ''){
+        e.preventDefault();
+        history.pushState(null, '', hash);
+        smoothScrollToHash(hash);
+      }
+      // otherwise allow normal navigation — on load handler will smooth-scroll
+    });
+  });
+})();
