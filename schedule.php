@@ -63,6 +63,7 @@ function startCalendar(){
   let appointments = [];
   let current = new Date();
   current.setDate(1);
+  const dailySlots = 11; // 08:00 às 18:00
 
   function formatDate(d){
     return d.toISOString().split('T')[0];
@@ -94,10 +95,22 @@ function startCalendar(){
       const cell = document.createElement('button');
       cell.className='calendar-cell day';
       const date = new Date(current.getFullYear(), current.getMonth(), d);
-      cell.textContent = d;
       const iso = formatDate(date);
-      const hasAny = appointments.some(a=>a.startsWith(iso));
+      const bookedCount = appointments.filter(a=>a.startsWith(iso)).length;
+      const fill = Math.min(100, Math.round((bookedCount / dailySlots) * 100));
+      const fullyBooked = fill >= 100;
+      const hasAny = bookedCount > 0;
+
+      cell.style.setProperty('--day-fill', `${fill}%`);
+      cell.dataset.fill = String(fill);
+      cell.dataset.date = iso;
+      cell.dataset.occupied = String(bookedCount);
+      cell.title = fullyBooked ? 'não existe horários disponíveis para tal horário' : `${fill}% ocupado`;
+      cell.innerHTML = `<span class="calendar-day-number">${d}</span><span class="calendar-day-badge">${fill}%</span>`;
+
       if(hasAny) cell.classList.add('booked');
+      if(fullyBooked) cell.classList.add('fully-booked');
+
       cell.onclick = ()=>{
         showTimeslotsFor(date);
       };
@@ -109,7 +122,12 @@ function startCalendar(){
 
   function showTimeslotsFor(date){
     const iso = formatDate(date);
-    timeslotsTitle.textContent = `Horários disponíveis para ${iso}`;
+    const bookedCount = appointments.filter(a=>a.startsWith(iso)).length;
+    if(bookedCount >= dailySlots){
+      timeslotsTitle.textContent = `não existe horários disponíveis para ${iso}`;
+    } else {
+      timeslotsTitle.textContent = `Horários disponíveis para ${iso}`;
+    }
     timeslotList.innerHTML = '';
     // generate times 08:00 to 18:00 every 1h
     for(let h=8; h<=18; h++){
