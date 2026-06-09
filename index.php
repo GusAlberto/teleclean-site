@@ -210,17 +210,17 @@ include __DIR__ . '/includes/head.php';
                 <article class="testimonial-card reveal" itemprop="itemListElement" itemscope itemtype="https://schema.org/Review">
                     <meta itemprop="position" content="1">
                     <p itemprop="reviewBody">“O carro voltou com outra apresentação. O atendimento foi objetivo, explicaram o processo e o acabamento ficou acima do que eu esperava.”</p>
-                    <footer><strong itemprop="author">Marcos P.</strong><span>Polimento técnico e proteção</span></footer>
+                    <footer><strong itemprop="author">Marcos P.</strong><span> Polimento técnico e proteção</span></footer>
                 </article>
                 <article class="testimonial-card reveal" itemprop="itemListElement" itemscope itemtype="https://schema.org/Review">
                     <meta itemprop="position" content="2">
                     <p itemprop="reviewBody">“Gostei da organização no horário e do cuidado interno. A higienização deixou o ambiente muito mais agradável e com aparência realmente premium.”</p>
-                    <footer><strong itemprop="author">Renata S.</strong><span>Higienização interna</span></footer>
+                    <footer><strong itemprop="author">Renata S.</strong><span> Higienização interna</span></footer>
                 </article>
                 <article class="testimonial-card reveal" itemprop="itemListElement" itemscope itemtype="https://schema.org/Review">
                     <meta itemprop="position" content="3">
                     <p itemprop="reviewBody">“Dá para perceber atenção aos detalhes. Não é uma lavagem comum. O carro ficou limpo, alinhado e com brilho muito mais elegante.”</p>
-                    <footer><strong itemprop="author">Felipe A.</strong><span>Lavagem técnica</span></footer>
+                    <footer><strong itemprop="author">Felipe A.</strong><span> Lavagem técnica</span></footer>
                 </article>
             </div>
         </div>
@@ -298,13 +298,12 @@ include __DIR__ . '/includes/head.php';
         <div class="container cta-section__inner reveal">
             <div>
                 <span class="section__eyebrow">Orçamento e agendamento</span>
-                <h2>Seu veiculo pode ter brilho de vitrine, protecao duradoura e acabamento que chama atencao.</h2>
+                <h2>Seu veículo pode ter brilho de vitrine, proteção duradoura e acabamento que chama atenção.</h2>
                 <p>Envie fotos no WhatsApp e receba uma avaliacao tecnica da TeleClean com orientacao clara do melhor pacote para o seu objetivo.</p>
                 <ul class="cta-section__meta" role="list">
                     <li><strong>Telefone e WhatsApp:</strong> (31) 3568-3754</li>
                     <li><strong>E-mail:</strong> contato@teleclean.com.br</li>
                     <li><strong>PIX da empresa:</strong> contato@teleclean.com.br</li>
-                    <li><strong>Checkout:</strong> ainda a definir</li>
                 </ul>
             </div>
             <div class="cta-section__actions">
