@@ -98,8 +98,15 @@ a {
 	font-weight: 700;
 }
 
-.brand svg {
-	width: 120px;
+.brand__wordmark {
+	display: inline-flex;
+	align-items: center;
+	min-height: 36px;
+	font-size: 1.05rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--text);
 }
 
 .main-nav {
