@@ -442,7 +442,7 @@ a {
 }
 
 .service-carousel--mini .service-card--carousel {
-	width: min(46vw, 150px);
+	width: min(42vw, 128px);
 	opacity: 0.8;
 	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.24);
 }
@@ -496,13 +496,7 @@ a {
 }
 
 .service-carousel--mini .service-card__body p {
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-	font-size: 0.75rem;
-	line-height: 1.35;
-	margin-bottom: 0.35rem;
+	display: none;
 }
 
 .service-carousel--mini .service-card__body a {
@@ -875,11 +869,11 @@ a {
 	}
 
 	.service-carousel--mini .service-carousel__stage {
-		height: clamp(230px, 52vw, 330px);
+		height: clamp(220px, 48vw, 300px);
 	}
 
 	.service-carousel--mini .service-card--carousel {
-		width: min(52vw, 140px);
+		width: min(46vw, 120px);
 	}
 }
 
@@ -933,7 +927,7 @@ a {
 	}
 
 	.service-carousel--mini .service-card--carousel {
-		width: min(54vw, 125px);
+		width: min(50vw, 116px);
 	}
 }
 

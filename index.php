@@ -85,7 +85,7 @@ include __DIR__ . '/includes/head.php';
                 <p class="services-summary">Na TeleClean, nossos serviços vão além da lavagem: oferecemos soluções completas de proteção e revitalização, seja para o dia a dia (Beginner) ou para um upgrade (Profissional). Destaques: Polimento técnico, Vitrificação, Guarnaminha e Clarixa. Também realizamos limpeza de motor e caixa de roda, tratamento de couro e higienização interna.</p>
             </div>
 
-            <div class="service-carousel service-carousel--mini reveal" data-service-carousel aria-label="Carrossel 3D de serviços">
+            <div class="service-carousel service-carousel--mini" data-service-carousel aria-label="Carrossel 3D de serviços">
                 <div class="service-carousel__stage" data-service-stage tabindex="0">
                     <div class="service-carousel__ring" data-service-ring>
                         <article class="service-card service-card--carousel" data-service-card id="lavagem-tecnica">

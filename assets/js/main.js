@@ -104,7 +104,7 @@ if (serviceCarousel) {
 
     const positionCards = () => {
       const cardWidth = cards[0].getBoundingClientRect().width || 320;
-      radius = Math.max((cardWidth / 2) / Math.tan(Math.PI / cards.length), serviceCarousel.classList.contains('service-carousel--mini') ? 120 : 260);
+      radius = Math.max((cardWidth / 2) / Math.tan(Math.PI / cards.length), serviceCarousel.classList.contains('service-carousel--mini') ? 108 : 260);
       cards.forEach((card, index) => {
         const angle = index * (360 / cards.length);
         card.style.transform = `translate(-50%, -50%) rotateY(${angle}deg) translateZ(${radius}px)`;
