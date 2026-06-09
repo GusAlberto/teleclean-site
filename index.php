@@ -1,6 +1,6 @@
 <?php
-$pageTitle = 'Tele Clean Detail | Estetica Automotiva em Belo Horizonte';
-$pageDescription = 'Tele Clean Detail | Estetica Automotiva. Especialistas em polimento tecnico, vitrificacao e detalhamento automotivo em Belo Horizonte. Fale no WhatsApp e solicite seu orcamento.';
+$pageTitle = 'TeleClean | Estética Automotiva em Belo Horizonte';
+$pageDescription = 'TeleClean | Estética Automotiva. Especialistas em polimento técnico, vitrificação e detalhamento automotivo em Belo Horizonte. Fale no WhatsApp e solicite seu orçamento.';
 $canonicalUrl = 'https://www.teleclean.com.br/';
 $ogImage = 'assets/img/og-cover.jpg';
 include __DIR__ . '/includes/head.php';
@@ -16,9 +16,9 @@ include __DIR__ . '/includes/head.php';
         </video>
         <div class="hero__overlay" aria-hidden="true"></div>
         <div class="container hero__content">
-            <div class="eyebrow reveal">Tele Clean Detail | Estetica Automotiva</div>
-            <h1 class="reveal">Polimento tecnico, vitrificação e detalhamento para deixar seu carro com acabamento de alto nivel.</h1>
-            <p class="hero__text reveal">A TeleClean atende em Belo Horizonte com processo técnico, transparência no diagnostico e foco total em resultado visual. Seu veiculo sai com mais brilho, protecao e valor percebido.</p>
+            <div class="eyebrow reveal">TeleClean | Estética Automotiva</div>
+            <h1 class="reveal">Polimento técnico, vitrificação e detalhamento para deixar seu carro com acabamento de alto nível.</h1>
+            <p class="hero__text reveal">A TeleClean atende em Belo Horizonte com processo técnico, transparência no diagnóstico e foco total em resultado visual. Seu veículo sai com mais brilho, proteção e valor percebido.</p>
             <div class="eyebrow reveal">Cuidado técnico • acabamento premium • atendimento local</div>
             <h1 class="reveal">Estética automotiva premium para quem valoriza cada detalhe do veículo.</h1>
             <p class="hero__text reveal">Lavagem técnica, higienização, polimento e proteção com padrão profissional, processo cuidadoso e atendimento com hora marcada em Belo Horizonte.</p>
@@ -39,7 +39,7 @@ include __DIR__ . '/includes/head.php';
             <div class="section__heading reveal">
                 <span class="section__eyebrow">Serviços</span>
                 <h2>Tratamentos pensados para estética, conservação e valorização do veículo.</h2>
-                <p>Cada serviço foi descrito para facilitar a decisão do cliente e levar direto ao contato comercial.</p>
+                <p>Cada serviço foi descrito para facilitar a decisão do cliente e levá-lo direto ao contato comercial.</p>
             </div>
 
             <div class="carousel reveal" data-carousel aria-label="Carrossel de serviços">

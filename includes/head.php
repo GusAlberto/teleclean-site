@@ -1,6 +1,6 @@
 <?php
 $pageTitle = $pageTitle ?? 'TeleClean';
-$pageDescription = $pageDescription ?? 'Tele Clean Detail | Estetica Automotiva em Belo Horizonte. Especialistas em polimento tecnico, vitrificacao e detalhamento automotivo.';
+$pageDescription = $pageDescription ?? 'TeleClean | Estética Automotiva em Belo Horizonte. Especialistas em polimento técnico, vitrificação e detalhamento automotivo.';
 $canonicalUrl = $canonicalUrl ?? 'https://www.teleclean.com.br/';
 $ogImage = $ogImage ?? 'assets/img/og-cover.jpg';
 ?>
@@ -41,11 +41,11 @@ $ogImage = $ogImage ?? 'assets/img/og-cover.jpg';
       "url": "https://www.teleclean.com.br/",
       "telephone": "+55 31 3568-3754",
       "priceRange": "$$$",
-      "description": "Tele Clean Detail | Estetica Automotiva. Especialistas em polimento tecnico, vitrificacao e detalhamento automotivo em Belo Horizonte.",
+      "description": "TeleClean | Estética Automotiva. Especialistas em polimento técnico, vitrificação e detalhamento automotivo em Belo Horizonte.",
       "email": "contato@teleclean.com.br",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Rua Benjamim Flores, 170 - Santo Antonio",
+        "streetAddress": "Rua Benjamim Flores, 170 - Santo Antônio",
         "addressLocality": "Belo Horizonte",
         "addressRegion": "MG",
         "addressCountry": "BR"
@@ -54,16 +54,16 @@ $ogImage = $ogImage ?? 'assets/img/og-cover.jpg';
       "sameAs": [
         "https://www.instagram.com/teleclean_/"
       ],
-      "areaServed": "Belo Horizonte e regiao metropolitana",
+      "areaServed": "Belo Horizonte e região metropolitana",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Servicos de estetica automotiva",
+        "name": "Serviços de estética automotiva",
         "itemListElement": [
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Polimento tecnico"}},
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Vitrificacao"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Polimento técnico"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Vitrificação"}},
           {"@type":"Offer","itemOffered":{"@type":"Service","name":"Detalhamento automotivo"}},
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Higienizacao interna"}},
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Lavagem tecnica"}}
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Higienização interna"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Lavagem técnica"}}
         ]
       }
     }

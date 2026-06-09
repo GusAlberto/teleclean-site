@@ -2,7 +2,7 @@
     <div class="container site-footer__grid">
         <div>
             <h2>TeleClean</h2>
-            <p>Tele Clean Detail | Estetica Automotiva. Especialistas em polimento tecnico, vitrificacao e detalhamento automotivo.</p>
+            <p>TeleClean | Estética Automotiva. Especialistas em polimento técnico, vitrificação e detalhamento automotivo.</p>
         </div>
         <div>
             <h3>Contato</h3>
@@ -10,14 +10,14 @@
                 <li><a href="tel:+553135683754">(31) 3568-3754</a></li>
                 <li><a href="https://wa.me/553135683754" target="_blank" rel="noopener noreferrer">WhatsApp comercial</a></li>
                 <li><a href="mailto:contato@teleclean.com.br">contato@teleclean.com.br</a></li>
-                <li><a href="https://maps.google.com/?q=Rua+Benjamim+Flores,+170,+Santo+Antonio,+Belo+Horizonte" target="_blank" rel="noopener noreferrer">Rua Benjamim Flores, 170 - Santo Antonio, Belo Horizonte/MG</a></li>
+                <li><a href="https://maps.google.com/?q=Rua+Benjamim+Flores,+170,+Santo+Ant%C3%B4nio,+Belo+Horizonte" target="_blank" rel="noopener noreferrer">Rua Benjamim Flores, 170 - Santo Antônio, Belo Horizonte/MG</a></li>
                 <li>PIX: contato@teleclean.com.br</li>
             </ul>
         </div>
         <div>
             <h3>Horário</h3>
             <ul role="list">
-                <li>Segunda a sabado: ate as 18h</li>
+                <li>Segunda a sábado: até as 18h</li>
                 <li>Atendimento com hora marcada</li>
             </ul>
         </div>
