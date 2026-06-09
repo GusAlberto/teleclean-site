@@ -347,16 +347,101 @@ a {
 	width: 100%;
 }
 
-.carousel__viewport {
-	overflow-x: auto;
-	padding-bottom: 0.6rem;
+.service-carousel {
+	display: grid;
+	gap: 1rem;
 }
 
-.carousel__track {
-	display: grid;
-	grid-auto-flow: column;
-	grid-auto-columns: minmax(280px, 350px);
-	gap: 1rem;
+.service-carousel__stage {
+	position: relative;
+	height: clamp(540px, 76vw, 820px);
+	perspective: 1600px;
+	overflow: hidden;
+	border: 1px solid rgba(79, 227, 208, 0.16);
+	border-radius: 24px;
+	background:
+		linear-gradient(180deg, rgba(22, 33, 45, 0.78), rgba(12, 18, 25, 0.92)),
+		radial-gradient(circle at 50% 18%, rgba(79, 227, 208, 0.12), transparent 28%);
+	box-shadow: var(--shadow);
+	user-select: none;
+	touch-action: pan-y;
+	cursor: grab;
+}
+
+.service-carousel__stage:active {
+	cursor: grabbing;
+}
+
+.service-carousel__stage::before {
+	content: '';
+	position: absolute;
+	inset: 12% 10%;
+	border-radius: 999px;
+	border: 1px solid rgba(79, 227, 208, 0.1);
+	box-shadow: 0 0 0 1px rgba(79, 227, 208, 0.04) inset;
+	opacity: 0.8;
+}
+
+.service-carousel__stage::after {
+	content: 'Arraste';
+	position: absolute;
+	left: 50%;
+	top: 1rem;
+	transform: translateX(-50%);
+	padding: 0.45rem 0.8rem;
+	border-radius: 999px;
+	background: rgba(8, 15, 21, 0.66);
+	border: 1px solid rgba(79, 227, 208, 0.2);
+	color: var(--primary);
+	font-size: 0.78rem;
+	font-weight: 800;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	z-index: 2;
+}
+
+.service-carousel__ring {
+	position: absolute;
+	inset: 0;
+	transform-style: preserve-3d;
+	will-change: transform;
+}
+
+.service-card--carousel {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: min(84vw, 340px);
+	transform-style: preserve-3d;
+	transform-origin: center center;
+	backface-visibility: hidden;
+	opacity: 0.72;
+	transition: opacity 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+	box-shadow: 0 18px 34px rgba(0, 0, 0, 0.26);
+	margin: 0;
+}
+
+.service-card--carousel:hover,
+.service-card--carousel:focus-within,
+.service-card--carousel.is-active {
+	opacity: 1;
+	box-shadow: 0 20px 42px rgba(0, 0, 0, 0.36), 0 0 0 1px rgba(79, 227, 208, 0.14) inset;
+}
+
+.service-card--carousel:hover img,
+.service-card--carousel:focus-within img {
+	transform: scale(1.04);
+}
+
+.service-card--carousel img {
+	transition: transform 0.28s ease;
+}
+
+.service-carousel__hint {
+	margin: 0;
+	text-align: center;
+	color: var(--muted);
+	font-size: 0.94rem;
 }
 
 .service-card,
@@ -708,6 +793,10 @@ a {
 	.compare-grid {
 		grid-template-columns: 1fr;
 	}
+
+	.service-carousel__stage {
+		height: 640px;
+	}
 }
 
 @media (max-width: 1100px) {
@@ -745,6 +834,18 @@ a {
 	.mobile-menu a {
 		text-decoration: none;
 		color: var(--text);
+	}
+
+	.service-card--carousel {
+		width: min(74vw, 320px);
+	}
+
+	.service-carousel__stage {
+		height: 560px;
+	}
+
+	.service-card--carousel {
+		width: min(82vw, 300px);
 	}
 }
 

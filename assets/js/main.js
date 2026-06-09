@@ -3,7 +3,7 @@ const navToggle = document.querySelector('[data-nav-toggle]');
 const mobileMenu = document.getElementById('mobile-menu');
 const backToTop = document.querySelector('[data-back-to-top]');
 const reveals = document.querySelectorAll('.reveal');
-const carousel = document.querySelector('[data-carousel]');
+const serviceCarousel = document.querySelector('[data-service-carousel]');
 const accordion = document.querySelector('[data-accordion]');
 
 const MEDIA_FALLBACK = 'assets/img/placeholder.svg';
@@ -72,28 +72,102 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
   reveals.forEach((item) => item.classList.add('is-visible'));
 }
 
-if (carousel) {
-  const viewport = carousel.querySelector('.carousel__viewport');
-  const prev = carousel.querySelector('[data-carousel-prev]');
-  const next = carousel.querySelector('[data-carousel-next]');
-  if (!viewport) {
-    // Carousel incompleto: ignora comportamento para evitar erro em runtime.
-  } else {
-    const amount = () => Math.min(viewport.clientWidth * 0.9, 380);
+if (serviceCarousel) {
+  const stage = serviceCarousel.querySelector('[data-service-stage]');
+  const ring = serviceCarousel.querySelector('[data-service-ring]');
+  const cards = Array.from(serviceCarousel.querySelectorAll('[data-service-card]'));
+  const prev = serviceCarousel.querySelector('[data-carousel-prev]');
+  const next = serviceCarousel.querySelector('[data-carousel-next]');
 
-    prev?.addEventListener('click', () => viewport.scrollBy({ left: -amount(), behavior: 'smooth' }));
-    next?.addEventListener('click', () => viewport.scrollBy({ left: amount(), behavior: 'smooth' }));
+  if (stage && ring && cards.length) {
+    const state = { rotation: 0, target: 0 };
+    let radius = 0;
+    let activeTween = null;
+    let dragStartX = 0;
+    let dragStartRotation = 0;
+    let dragging = false;
 
-    viewport.addEventListener('keydown', (event) => {
+    const setActiveCard = () => {
+      const normalized = ((state.rotation % 360) + 360) % 360;
+      const activeIndex = Math.round(normalized / (360 / cards.length)) % cards.length;
+      cards.forEach((card, index) => card.classList.toggle('is-active', index === activeIndex));
+    };
+
+    const render = () => {
+      if (typeof gsap !== 'undefined') {
+        gsap.set(ring, { rotationY: state.rotation, transformPerspective: 1600, transformOrigin: '50% 50%' });
+      } else {
+        ring.style.transform = `rotateY(${state.rotation}deg)`;
+      }
+      setActiveCard();
+    };
+
+    const positionCards = () => {
+      const cardWidth = cards[0].getBoundingClientRect().width || 320;
+      radius = Math.max((cardWidth / 2) / Math.tan(Math.PI / cards.length), 260);
+      cards.forEach((card, index) => {
+        const angle = index * (360 / cards.length);
+        card.style.transform = `translate(-50%, -50%) rotateY(${angle}deg) translateZ(${radius}px)`;
+      });
+      render();
+    };
+
+    const animateTo = (rotation) => {
+      state.target = rotation;
+      if (typeof gsap !== 'undefined') {
+        activeTween?.kill?.();
+        activeTween = gsap.to(state, {
+          rotation,
+          duration: 0.75,
+          ease: 'power3.out',
+          onUpdate: render,
+        });
+      } else {
+        state.rotation = rotation;
+        render();
+      }
+    };
+
+    prev?.addEventListener('click', () => animateTo(state.rotation + (360 / cards.length)));
+    next?.addEventListener('click', () => animateTo(state.rotation - (360 / cards.length)));
+
+    const onPointerMove = (event) => {
+      if (!dragging) return;
+      const delta = event.clientX - dragStartX;
+      state.rotation = dragStartRotation + (delta * 0.28);
+      render();
+    };
+
+    const endDrag = () => {
+      if (!dragging) return;
+      dragging = false;
+      window.removeEventListener('pointermove', onPointerMove);
+      window.removeEventListener('pointerup', endDrag);
+      animateTo(Math.round(state.rotation / (360 / cards.length)) * (360 / cards.length));
+    };
+
+    stage.addEventListener('pointerdown', (event) => {
+      dragging = true;
+      dragStartX = event.clientX;
+      dragStartRotation = state.rotation;
+      activeTween?.kill?.();
+      window.addEventListener('pointermove', onPointerMove);
+      window.addEventListener('pointerup', endDrag);
+    });
+
+    stage.addEventListener('keydown', (event) => {
       if (event.key === 'ArrowRight') {
         event.preventDefault();
-        viewport.scrollBy({ left: amount(), behavior: 'smooth' });
+        animateTo(state.rotation - (360 / cards.length));
       }
       if (event.key === 'ArrowLeft') {
         event.preventDefault();
-        viewport.scrollBy({ left: -amount(), behavior: 'smooth' });
+        animateTo(state.rotation + (360 / cards.length));
       }
     });
+
+    window.addEventListener('resize', positionCards, { passive: true });
+    positionCards();
   }
 }
 

@@ -32,6 +32,7 @@ $ogImage = $ogImage ?? 'assets/img/og-cover.jpg';
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
     <link rel="preload" as="style" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

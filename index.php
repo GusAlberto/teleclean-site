@@ -85,10 +85,10 @@ include __DIR__ . '/includes/head.php';
                 <p class="services-summary">Na TeleClean, nossos serviços vão além da lavagem: oferecemos soluções completas de proteção e revitalização, seja para o dia a dia (Beginner) ou para um upgrade (Profissional). Destaques: Polimento técnico, Vitrificação, Guarnaminha e Clarixa. Também realizamos limpeza de motor e caixa de roda, tratamento de couro e higienização interna.</p>
             </div>
 
-            <div class="carousel reveal" data-carousel aria-label="Carrossel de serviços">
-                <div class="carousel__viewport" tabindex="0">
-                    <div class="carousel__track">
-                        <article class="service-card" id="lavagem-tecnica">
+            <div class="service-carousel reveal" data-service-carousel aria-label="Carrossel 3D de serviços">
+                <div class="service-carousel__stage" data-service-stage tabindex="0">
+                    <div class="service-carousel__ring" data-service-ring>
+                        <article class="service-card service-card--carousel" data-service-card id="lavagem-tecnica">
                             <img src="assets/img/service-lavagem.jpg" alt="Veículo preto recebendo lavagem técnica detalhada" width="560" height="420" loading="eager" decoding="async">
                             <div class="service-card__body">
                                 <h3>Lavagem técnica</h3>
@@ -96,7 +96,7 @@ include __DIR__ . '/includes/head.php';
                                 <a href="https://wa.me/553135683754?text=Tenho%20interesse%20em%20lavagem%20t%C3%A9cnica." target="_blank" rel="noopener noreferrer">Solicitar avaliação</a>
                             </div>
                         </article>
-                        <article class="service-card" id="higienizacao-interna">
+                        <article class="service-card service-card--carousel" data-service-card id="higienizacao-interna">
                             <img src="assets/img/service-higienizacao.jpg" alt="Interior automotivo claro passando por higienização interna" width="560" height="420" loading="lazy" decoding="async">
                             <div class="service-card__body">
                                 <h3>Higienização interna</h3>
@@ -104,7 +104,7 @@ include __DIR__ . '/includes/head.php';
                                 <a href="https://wa.me/553135683754?text=Quero%20um%20or%C3%A7amento%20de%20higieniza%C3%A7%C3%A3o%20interna." target="_blank" rel="noopener noreferrer">Pedir orçamento</a>
                             </div>
                         </article>
-                        <article class="service-card" id="polimento-tecnico">
+                        <article class="service-card service-card--carousel" data-service-card id="polimento-tecnico">
                             <img src="assets/img/service-polimento.jpg" alt="Capô automotivo polido com reflexo nítido em ambiente escuro" width="560" height="420" loading="lazy" decoding="async">
                             <div class="service-card__body">
                                 <h3>Polimento técnico</h3>
@@ -112,7 +112,7 @@ include __DIR__ . '/includes/head.php';
                                 <a href="https://wa.me/553135683754?text=Gostaria%20de%20avaliar%20polimento%20t%C3%A9cnico." target="_blank" rel="noopener noreferrer">Agendar análise</a>
                             </div>
                         </article>
-                        <article class="service-card" id="cristalizacao">
+                        <article class="service-card service-card--carousel" data-service-card id="cristalizacao">
                             <img src="assets/img/service-cristalizacao.jpg" alt="Carro escuro com acabamento brilhante após cristalização" width="560" height="420" loading="lazy" decoding="async">
                             <div class="service-card__body">
                                 <h3>Cristalização</h3>
@@ -120,7 +120,7 @@ include __DIR__ . '/includes/head.php';
                                 <a href="https://wa.me/553135683754?text=Quero%20saber%20sobre%20cristaliza%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">Ver disponibilidade</a>
                             </div>
                         </article>
-                        <article class="service-card" id="vitrificacao">
+                        <article class="service-card service-card--carousel" data-service-card id="vitrificacao">
                             <img src="assets/img/service-vitrificacao.jpg" alt="Aplicação de proteção vitrificadora em pintura automotiva" width="560" height="420" loading="lazy" decoding="async">
                             <div class="service-card__body">
                                 <h3>Vitrificação</h3>
@@ -128,7 +128,7 @@ include __DIR__ . '/includes/head.php';
                                 <a href="https://wa.me/553135683754?text=Tenho%20interesse%20em%20vitrifica%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
                             </div>
                         </article>
-                        <article class="service-card" id="limpeza-bancos-teto">
+                        <article class="service-card service-card--carousel" data-service-card id="limpeza-bancos-teto">
                             <img src="assets/img/service-bancos.jpg" alt="Banco automotivo sendo higienizado com equipamento profissional" width="560" height="420" loading="lazy" decoding="async">
                             <div class="service-card__body">
                                 <h3>Limpeza de bancos e teto</h3>
@@ -136,7 +136,7 @@ include __DIR__ . '/includes/head.php';
                                 <a href="https://wa.me/553135683754?text=Preciso%20de%20limpeza%20de%20bancos%20e%20teto." target="_blank" rel="noopener noreferrer">Falar com a equipe</a>
                             </div>
                         </article>
-                        <article class="service-card" id="revitalizacao-plasticos">
+                        <article class="service-card service-card--carousel" data-service-card id="revitalizacao-plasticos">
                             <img src="assets/img/service-plasticos.jpg" alt="Detalhe de plástico automotivo revitalizado no painel e acabamento interno" width="560" height="420" loading="lazy" decoding="async">
                             <div class="service-card__body">
                                 <h3>Revitalização de plásticos</h3>
@@ -144,7 +144,7 @@ include __DIR__ . '/includes/head.php';
                                 <a href="https://wa.me/553135683754?text=Quero%20revitalizar%20pl%C3%A1sticos%20do%20ve%C3%ADculo." target="_blank" rel="noopener noreferrer">Solicitar avaliação</a>
                             </div>
                         </article>
-                        <article class="service-card" id="remocao-odores">
+                        <article class="service-card service-card--carousel" data-service-card id="remocao-odores">
                             <img src="assets/img/service-odores.jpg" alt="Interior limpo de veículo após processo de remoção de odores" width="560" height="420" loading="lazy" decoding="async">
                             <div class="service-card__body">
                                 <h3>Remoção de odores</h3>
@@ -152,7 +152,7 @@ include __DIR__ . '/includes/head.php';
                                 <a href="https://wa.me/553135683754?text=Gostaria%20de%20remover%20odores%20do%20ve%C3%ADculo." target="_blank" rel="noopener noreferrer">Agendar atendimento</a>
                             </div>
                         </article>
-                        <article class="service-card" id="detalhamento-completo">
+                        <article class="service-card service-card--carousel" data-service-card id="detalhamento-completo">
                             <img src="assets/img/service-detalhamento.jpg" alt="Veículo preto em estúdio após detalhamento completo premium" width="560" height="420" loading="lazy" decoding="async">
                             <div class="service-card__body">
                                 <h3>Detalhamento completo</h3>
@@ -162,6 +162,7 @@ include __DIR__ . '/includes/head.php';
                         </article>
                     </div>
                 </div>
+                <p class="service-carousel__hint">Arraste para girar o carrossel e passe o mouse para destacar cada serviço.</p>
                 <div class="carousel__controls">
                     <button class="carousel__button" type="button" data-carousel-prev aria-label="Serviço anterior">Anterior</button>
                     <button class="carousel__button" type="button" data-carousel-next aria-label="Próximo serviço">Próximo</button>
