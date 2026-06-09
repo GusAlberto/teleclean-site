@@ -1,6 +1,6 @@
 <header class="site-header" data-header>
     <div class="container site-header__inner">
-        <a class="brand" href="#inicio" aria-label="TeleClean - voltar ao início">
+        <a class="brand" href="/" aria-label="TeleClean - voltar ao início">
             <svg viewBox="0 0 160 36" aria-hidden="true" focusable="false">
                 <path d="M8 28V8h12.2c5.8 0 9.3 3.1 9.3 7.8 0 3.1-1.5 5.4-4.2 6.6L30.5 28H24l-4.4-4.7H14V28H8Zm6-9.5h5.8c2.4 0 3.8-1.1 3.8-3s-1.4-2.9-3.8-2.9H14v5.9Z" fill="currentColor"/>
                 <path d="M40 28V8h6v14.9h15V28H40Z" fill="currentColor"/>
@@ -18,23 +18,23 @@
             </button>
             <ul class="nav-list" role="list">
                 <li><a href="/schedule.php">Agendar</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#diferenciais">Diferenciais</a></li>
-                <li><a href="#antes-depois">Antes e depois</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a class="btn btn--nav" href="#orcamento">Orçamento</a></li>
+                <li><a href="/#servicos">Serviços</a></li>
+                <li><a href="/#diferenciais">Diferenciais</a></li>
+                <li><a href="/#antes-depois">Antes e depois</a></li>
+                <li><a href="/#depoimentos">Depoimentos</a></li>
+                <li><a href="/#faq">FAQ</a></li>
+                <li><a class="btn btn--nav" href="/#orcamento">Orçamento</a></li>
             </ul>
             <div class="mobile-menu" id="mobile-menu" hidden>
                 <ul role="list">
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#diferenciais">Diferenciais</a></li>
-                    <li><a href="#antes-depois">Antes e depois</a></li>
-                    <li><a href="#processo">Processo</a></li>
-                    <li><a href="#depoimentos">Depoimentos</a></li>
-                    <li><a href="#galeria">Galeria</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a class="btn btn--primary btn--block" href="#orcamento">Solicitar orçamento</a></li>
+                    <li><a href="/#servicos">Serviços</a></li>
+                    <li><a href="/#diferenciais">Diferenciais</a></li>
+                    <li><a href="/#antes-depois">Antes e depois</a></li>
+                    <li><a href="/#processo">Processo</a></li>
+                    <li><a href="/#depoimentos">Depoimentos</a></li>
+                    <li><a href="/#galeria">Galeria</a></li>
+                    <li><a href="/#faq">FAQ</a></li>
+                    <li><a class="btn btn--primary btn--block" href="/#orcamento">Solicitar orçamento</a></li>
                 </ul>
             </div>
         </nav>
