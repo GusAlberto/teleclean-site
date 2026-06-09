@@ -6,8 +6,9 @@
 	--text: #eff4f8;
 	--muted: #b2c0cc;
 	--line: rgba(255, 255, 255, 0.12);
-	--primary: #f2b233;
-	--primary-strong: #e8a217;
+	--primary: #4fe3d0;
+	--primary-strong: #1ccab8;
+	--primary-glow: rgba(79, 227, 208, 0.28);
 	--shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
 	--radius: 16px;
 }
@@ -26,7 +27,7 @@ body {
 	line-height: 1.55;
 	color: var(--text);
 	background:
-		radial-gradient(circle at 10% -10%, rgba(242, 178, 51, 0.12), transparent 35%),
+		radial-gradient(circle at 10% -10%, rgba(79, 227, 208, 0.16), transparent 35%),
 		radial-gradient(circle at 95% 10%, rgba(71, 127, 171, 0.18), transparent 40%),
 		var(--bg);
 }
@@ -283,27 +284,32 @@ a {
 
 .btn--primary,
 .btn--nav {
-	background: var(--primary);
+	background: linear-gradient(180deg, rgba(79, 227, 208, 0.98), rgba(28, 202, 184, 0.98));
 	color: #081015;
 }
 
 .btn--nav {
 	padding: 0.78rem 1.1rem;
 	min-height: 48px;
-	border: 1px solid rgba(242, 178, 51, 0.38);
-	background: linear-gradient(180deg, rgba(18, 27, 36, 0.98), rgba(9, 15, 21, 0.98));
+	border: 1px solid rgba(79, 227, 208, 0.42);
+	background:
+		linear-gradient(180deg, rgba(18, 27, 36, 0.96), rgba(9, 15, 21, 0.96)) padding-box,
+		linear-gradient(135deg, rgba(79, 227, 208, 0.9), rgba(28, 202, 184, 0.65)) border-box;
 	color: var(--primary);
-	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(79, 227, 208, 0.08) inset;
 	white-space: nowrap;
 }
 
 .btn--primary:hover {
-	background: var(--primary-strong);
+	background: linear-gradient(180deg, rgba(92, 233, 218, 1), rgba(28, 202, 184, 1));
 }
 
 .btn--nav:hover {
-	background: linear-gradient(180deg, rgba(26, 38, 52, 0.98), rgba(13, 19, 27, 0.98));
-	color: #ffd977;
+	background:
+		linear-gradient(180deg, rgba(22, 35, 46, 0.98), rgba(11, 18, 24, 0.98)) padding-box,
+		linear-gradient(135deg, rgba(79, 227, 208, 1), rgba(92, 233, 218, 0.82)) border-box;
+	color: #a9fff5;
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3), 0 0 24px var(--primary-glow);
 }
 
 .btn--secondary,
@@ -397,7 +403,7 @@ a {
 	width: 2rem;
 	height: 2rem;
 	border-radius: 999px;
-	background: rgba(242, 178, 51, 0.16);
+	background: rgba(79, 227, 208, 0.16);
 	color: var(--primary);
 	font-weight: 700;
 }
@@ -472,8 +478,10 @@ a {
 
 .cta-section__inner {
 	border-radius: 18px;
-	border: 1px solid rgba(242, 178, 51, 0.38);
-	background: linear-gradient(135deg, rgba(242, 178, 51, 0.13), rgba(8, 15, 21, 0.9));
+	border: 1px solid rgba(79, 227, 208, 0.36);
+	background:
+		linear-gradient(135deg, rgba(79, 227, 208, 0.14), rgba(8, 15, 21, 0.92)),
+		radial-gradient(circle at top right, rgba(79, 227, 208, 0.12), transparent 36%);
 	padding: 1.2rem;
 	display: grid;
 	gap: 1rem;
@@ -508,7 +516,7 @@ a {
 	min-height: 56px;
 	padding: 0.9rem 1rem;
 	border-radius: 14px;
-	border: 1px solid rgba(242, 178, 51, 0.35);
+	border: 1px solid rgba(79, 227, 208, 0.34);
 	background: linear-gradient(180deg, rgba(23, 35, 48, 0.98), rgba(18, 27, 36, 0.98));
 	color: var(--text);
 	font: inherit;
@@ -516,7 +524,7 @@ a {
 	font-weight: 700;
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
-	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(79, 227, 208, 0.08) inset;
 	appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -525,7 +533,7 @@ a {
 .schedule-select:focus {
 	outline: none;
 	border-color: var(--primary);
-	box-shadow: 0 0 0 3px rgba(242, 178, 51, 0.18), 0 10px 24px rgba(0, 0, 0, 0.22);
+	box-shadow: 0 0 0 3px rgba(79, 227, 208, 0.2), 0 10px 24px rgba(0, 0, 0, 0.22);
 }
 
 .schedule-select option {
@@ -534,7 +542,7 @@ a {
 	background-color: #f4f7fb;
 }
 
-.calendar { background: linear-gradient(180deg, rgba(23, 35, 48, 0.98), rgba(18, 27, 36, 0.98)); padding: 1.1rem; border-radius: 16px; border: 1px solid rgba(242, 178, 51, 0.16); box-shadow: var(--shadow); }
+.calendar { background: linear-gradient(180deg, rgba(23, 35, 48, 0.98), rgba(18, 27, 36, 0.98)); padding: 1.1rem; border-radius: 16px; border: 1px solid rgba(79, 227, 208, 0.18); box-shadow: var(--shadow), 0 0 30px rgba(79, 227, 208, 0.06); }
 .calendar-header { display:flex; gap:1rem; align-items:center; justify-content:space-between; margin-bottom:0.8rem; }
 .calendar-header div { font-weight: 800; letter-spacing: 0.03em; text-transform: capitalize; }
 .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap:8px; }
@@ -546,13 +554,13 @@ a {
 	position: absolute;
 	inset: 0;
 	width: var(--day-fill, 0%);
-	background: linear-gradient(180deg, rgba(242, 178, 51, 0.28), rgba(242, 178, 51, 0.16));
+	background: linear-gradient(180deg, rgba(79, 227, 208, 0.3), rgba(28, 202, 184, 0.18));
 	z-index: 0;
 	transition: width 0.25s ease, background-color 0.25s ease;
 }
-.calendar-cell.day:hover { transform: translateY(-1px); border-color: rgba(242,178,51,0.55); box-shadow: 0 8px 18px rgba(0,0,0,0.22); }
-.calendar-cell.day.booked { border-color: rgba(255,255,255,0.22); box-shadow: 0 10px 20px rgba(242,178,51,0.22); }
-.calendar-cell.day.booked::before { background: linear-gradient(180deg, rgba(242,178,51,0.42), rgba(232,162,23,0.24)); }
+.calendar-cell.day:hover { transform: translateY(-1px); border-color: rgba(79, 227, 208, 0.58); box-shadow: 0 8px 18px rgba(0,0,0,0.22), 0 0 0 1px rgba(79, 227, 208, 0.08) inset; }
+.calendar-cell.day.booked { border-color: rgba(255,255,255,0.22); box-shadow: 0 10px 20px rgba(79, 227, 208, 0.2); }
+.calendar-cell.day.booked::before { background: linear-gradient(180deg, rgba(79, 227, 208, 0.46), rgba(28, 202, 184, 0.24)); }
 .calendar-cell.day.fully-booked { border-color: rgba(255,255,255,0.2); color: #fff; }
 .calendar-cell.day.fully-booked::before { width: 100%; background: linear-gradient(180deg, #e53935, #b71c1c); }
 .calendar-cell.day.fully-booked:hover { border-color: rgba(255,255,255,0.3); box-shadow: 0 10px 22px rgba(183,28,28,0.35); }
