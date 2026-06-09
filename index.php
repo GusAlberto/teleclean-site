@@ -252,7 +252,7 @@ include __DIR__ . '/includes/head.php';
             <div class="faq-list" data-accordion>
                 <article class="faq-item reveal">
                     <h3>
-                        <button type="button" aria-expanded="false" aria-controls="faq-1" id="faq-button-1">Quanto tempo leva um serviço de estética automotiva?</button>
+                        <button type="button" aria-expanded="false" aria-controls="faq-1" id="faq-button-1">01. Quanto tempo leva um serviço de estética automotiva?</button>
                     </h3>
                     <div id="faq-1" role="region" aria-labelledby="faq-button-1" hidden>
                         <p>O tempo varia conforme o pacote e o estado do veículo. Após a análise inicial, o cliente recebe uma estimativa clara de prazo.</p>
@@ -260,7 +260,7 @@ include __DIR__ . '/includes/head.php';
                 </article>
                 <article class="faq-item reveal">
                     <h3>
-                        <button type="button" aria-expanded="false" aria-controls="faq-2" id="faq-button-2">Precisa agendar antes?</button>
+                        <button type="button" aria-expanded="false" aria-controls="faq-2" id="faq-button-2">02. Precisa agendar antes?</button>
                     </h3>
                     <div id="faq-2" role="region" aria-labelledby="faq-button-2" hidden>
                         <p>Sim. O atendimento com hora marcada ajuda a manter organização, atenção ao veículo e melhor qualidade de execução.</p>
@@ -268,7 +268,7 @@ include __DIR__ . '/includes/head.php';
                 </article>
                 <article class="faq-item reveal">
                     <h3>
-                        <button type="button" aria-expanded="false" aria-controls="faq-3" id="faq-button-3">Qual a diferença entre cristalização e vitrificação?</button>
+                        <button type="button" aria-expanded="false" aria-controls="faq-3" id="faq-button-3">03. Qual a diferença entre cristalização e vitrificação?</button>
                     </h3>
                     <div id="faq-3" role="region" aria-labelledby="faq-button-3" hidden>
                         <p>Ambos são serviços de proteção com propostas diferentes. A recomendação ideal depende do objetivo do cliente, rotina de uso e condição da pintura.</p>
@@ -276,7 +276,7 @@ include __DIR__ . '/includes/head.php';
                 </article>
                 <article class="faq-item reveal">
                     <h3>
-                        <button type="button" aria-expanded="false" aria-controls="faq-4" id="faq-button-4">A higienização ajuda em odores e sujeira impregnada?</button>
+                        <button type="button" aria-expanded="false" aria-controls="faq-4" id="faq-button-4">04. A higienização ajuda em odores e sujeira impregnada?</button>
                     </h3>
                     <div id="faq-4" role="region" aria-labelledby="faq-button-4" hidden>
                         <p>Sim. Em muitos casos, a higienização interna combinada com tratamento específico melhora bastante a sensação de limpeza e conforto.</p>
@@ -284,7 +284,7 @@ include __DIR__ . '/includes/head.php';
                 </article>
                 <article class="faq-item reveal">
                     <h3>
-                        <button type="button" aria-expanded="false" aria-controls="faq-5" id="faq-button-5">Vocês atendem qualquer tipo de veículo?</button>
+                        <button type="button" aria-expanded="false" aria-controls="faq-5" id="faq-button-5">05. Vocês atendem qualquer tipo de veículo?</button>
                     </h3>
                     <div id="faq-5" role="region" aria-labelledby="faq-button-5" hidden>
                         <p>O ideal é enviar modelo, fotos e objetivo do serviço pelo WhatsApp para confirmar o melhor atendimento e o pacote mais adequado.</p>
@@ -292,7 +292,7 @@ include __DIR__ . '/includes/head.php';
                 </article>
                 <article class="faq-item reveal">
                     <h3>
-                        <button type="button" aria-expanded="false" aria-controls="faq-6" id="faq-button-6">Quais são os contatos da empresa?</button>
+                        <button type="button" aria-expanded="false" aria-controls="faq-6" id="faq-button-6">06. Quais são os contatos da empresa?</button>
                     </h3>
                     <div id="faq-6" role="region" aria-labelledby="faq-button-6" hidden>
                         <p><strong>Telefone e WhatsApp:</strong> (31) 3568-3754</p>
