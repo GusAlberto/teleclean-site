@@ -87,6 +87,12 @@ include __DIR__ . '/includes/head.php';
 
             <div class="service-carousel service-carousel--mini" data-service-carousel aria-label="Carrossel 3D de serviços">
                 <div class="service-carousel__stage" data-service-stage tabindex="0">
+                    <button class="carousel-arrow carousel-arrow--prev" type="button" data-carousel-prev aria-label="Serviço anterior">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <button class="carousel-arrow carousel-arrow--next" type="button" data-carousel-next aria-label="Próximo serviço">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
                     <div class="service-carousel__ring" data-service-ring>
                         <article class="service-card service-card--carousel" data-service-card id="lavagem-tecnica">
                             <img src="assets/img/service-lavagem.jpg" alt="Veículo preto recebendo lavagem técnica detalhada" width="560" height="420" loading="eager" decoding="async">
@@ -163,10 +169,6 @@ include __DIR__ . '/includes/head.php';
                     </div>
                 </div>
                 <p class="service-carousel__hint">Arraste para girar o carrossel e passe o mouse para destacar cada serviço.</p>
-                <div class="carousel__controls">
-                    <button class="carousel__button" type="button" data-carousel-prev aria-label="Serviço anterior">Anterior</button>
-                    <button class="carousel__button" type="button" data-carousel-next aria-label="Próximo serviço">Próximo</button>
-                </div>
             </div>
         </div>
     </section>

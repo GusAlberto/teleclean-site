@@ -149,6 +149,12 @@ if (serviceCarousel) {
     };
 
     stage.addEventListener('pointerdown', (event) => {
+      // Limita a área de arraste para o meio (ignora os 20% das bordas laterais)
+      const rect = stage.getBoundingClientRect();
+      const relativeX = event.clientX - rect.left;
+      const threshold = rect.width * 0.2;
+      if (relativeX < threshold || relativeX > rect.width - threshold) return;
+
       dragging = true;
       dragStartX = event.clientX;
       dragStartRotation = state.rotation;
