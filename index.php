@@ -1,7 +1,7 @@
 <?php
-$pageTitle = 'Estética Automotiva Premium em Belo Horizonte | Studio Black Detail';
+$pageTitle = 'Estética Automotiva Premium em Belo Horizonte | TeleClean';
 $pageDescription = 'Estética automotiva premium em Belo Horizonte com lavagem técnica, higienização, polimento, vitrificação e atendimento com hora marcada. Solicite seu orçamento pelo WhatsApp.';
-$canonicalUrl = 'https://www.studioblackdetail.com.br/';
+$canonicalUrl = 'https://www.teleclean.com.br/';
 $ogImage = 'assets/img/og-cover.jpg';
 include __DIR__ . '/includes/head.php';
 ?>

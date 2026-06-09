@@ -1,7 +1,7 @@
 <?php
-$pageTitle = $pageTitle ?? 'Studio Black Detail';
+$pageTitle = $pageTitle ?? 'TeleClean';
 $pageDescription = $pageDescription ?? 'Estética automotiva premium em Belo Horizonte.';
-$canonicalUrl = $canonicalUrl ?? 'https://www.studioblackdetail.com.br/';
+$canonicalUrl = $canonicalUrl ?? 'https://www.teleclean.com.br/';
 $ogImage = $ogImage ?? 'assets/img/og-cover.jpg';
 ?>
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ $ogImage = $ogImage ?? 'assets/img/og-cover.jpg';
     <meta property="og:title" content="<?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?>">
     <meta property="og:description" content="<?php echo htmlspecialchars($pageDescription, ENT_QUOTES, 'UTF-8'); ?>">
     <meta property="og:url" content="<?php echo htmlspecialchars($canonicalUrl, ENT_QUOTES, 'UTF-8'); ?>">
-    <meta property="og:site_name" content="Studio Black Detail">
+    <meta property="og:site_name" content="TeleClean">
     <meta property="og:image" content="<?php echo htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8'); ?>">
     <meta property="og:image:alt" content="Veículo premium com acabamento refinado após estética automotiva">
     <meta name="twitter:card" content="summary_large_image">
@@ -36,9 +36,9 @@ $ogImage = $ogImage ?? 'assets/img/og-cover.jpg';
     {
       "@context": "https://schema.org",
       "@type": "AutoDetailing",
-      "name": "Studio Black Detail",
-      "image": "https://www.studioblackdetail.com.br/assets/img/og-cover.jpg",
-      "url": "https://www.studioblackdetail.com.br/",
+      "name": "TeleClean",
+      "image": "https://www.teleclean.com.br/assets/img/og-cover.jpg",
+      "url": "https://www.teleclean.com.br/",
       "telephone": "+55 31 99999-9999",
       "priceRange": "$$$",
       "description": "Empresa de estética automotiva premium em Belo Horizonte com foco em lavagem técnica, higienização, polimento e proteção veicular.",
@@ -70,8 +70,8 @@ $ogImage = $ogImage ?? 'assets/img/og-cover.jpg';
         }
       ],
       "sameAs": [
-        "https://www.instagram.com/studioblackdetail",
-        "https://www.facebook.com/studioblackdetail"
+        "https://www.instagram.com/teleclean",
+        "https://www.facebook.com/teleclean"
       ],
       "areaServed": "Belo Horizonte e região",
       "hasOfferCatalog": {

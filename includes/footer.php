@@ -1,7 +1,7 @@
 <footer class="site-footer" id="contato">
     <div class="container site-footer__grid">
         <div>
-            <h2>Studio Black Detail</h2>
+            <h2>TeleClean</h2>
             <p>Estética automotiva premium para quem quer manter apresentação, proteção e cuidado visual em alto nível.</p>
         </div>
         <div>
@@ -26,12 +26,12 @@
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="https://www.instagram.com/studioblackdetail" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://www.instagram.com/teleclean" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             </ul>
         </div>
     </div>
     <div class="container site-footer__bottom">
-        <p>© <?php echo date('Y'); ?> Studio Black Detail. Todos os direitos reservados.</p>
+        <p>© <?php echo date('Y'); ?> TeleClean. Todos os direitos reservados.</p>
         <button class="back-to-top" type="button" data-back-to-top>Voltar ao topo</button>
     </div>
 </footer>
