@@ -498,6 +498,8 @@ a {
 
 .schedule-select option {
 	text-transform: uppercase;
+	color: #0b1117;
+	background-color: #f4f7fb;
 }
 
 .calendar { background: linear-gradient(180deg, rgba(23, 35, 48, 0.98), rgba(18, 27, 36, 0.98)); padding: 1.1rem; border-radius: 16px; border: 1px solid rgba(242, 178, 51, 0.16); box-shadow: var(--shadow); }
