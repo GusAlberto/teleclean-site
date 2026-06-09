@@ -308,7 +308,7 @@ include __DIR__ . '/includes/head.php';
             </div>
             <div class="cta-section__actions">
                 <a class="btn btn--primary" href="https://wa.me/553135683754?text=Ol%C3%A1%2C%20quero%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
-                <a class="btn btn--secondary" href="#contato">Ver contatos</a>
+                <a class="btn btn--secondary" href="/schedule.php">Ver agenda</a>
             </div>
         </div>
     </section>
