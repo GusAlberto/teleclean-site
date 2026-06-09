@@ -1,6 +1,6 @@
 <?php
-$pageTitle = 'TeleClean | Estética Automotiva em Belo Horizonte';
-$pageDescription = 'TeleClean | Estética Automotiva. Especialistas em polimento técnico, vitrificação e detalhamento automotivo em Belo Horizonte. Fale no WhatsApp e solicite seu orçamento.';
+$pageTitle = 'TeleClean Detail | Estética Automotiva em Belo Horizonte';
+$pageDescription = 'TeleClean Detail | Estética Automotiva. Especialistas em polimento técnico, vitrificação e detalhamento automotivo em Belo Horizonte. Fale no WhatsApp e solicite seu orçamento.';
 $canonicalUrl = 'https://www.teleclean.com.br/';
 $ogImage = 'assets/img/og-cover.jpg';
 include __DIR__ . '/includes/head.php';
