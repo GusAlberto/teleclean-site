@@ -18,7 +18,7 @@ include __DIR__ . '/includes/head.php';
         <div class="container hero__content">
             <div class="eyebrow reveal">TeleClean Detail | Estética Automotiva</div>
             <h1 class="reveal">Polimento técnico, vitrificação e detalhamento para deixar seu carro com acabamento de alto nível.</h1>
-            <p class="hero__text reveal">A TeleClean atende em Belo Horizonte com processo técnico, transparência no diagnóstico e foco total em resultado visual. Seu veículo sai com mais brilho, proteção e valor percebido.</p>
+            <p class="hero__text reveal">Atendemos em Belo Horizonte com processo técnico, transparência no diagnóstico e foco total em resultado visual. Seu veículo sai com mais brilho, proteção e valor percebido.</p>
             <div class="eyebrow reveal">Cuidado técnico • acabamento premium • atendimento local</div>
             <h1 class="reveal">Estética automotiva premium para quem valoriza cada detalhe do veículo.</h1>
             <p class="hero__text reveal">Lavagem técnica, higienização, polimento e proteção com padrão profissional, processo cuidadoso e atendimento com hora marcada em Belo Horizonte.</p>
