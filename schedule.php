@@ -20,11 +20,11 @@ include __DIR__ . '/includes/head.php';
             <div class="schedule-controls">
                 <label for="service-select">Serviço</label>
               <select id="service-select" class="schedule-select">
-                <option>POLIMENTO TÉCNICO</option>
-                <option>VITRIFICAÇÃO</option>
-                <option>DETALHAMENTO AUTOMOTIVO</option>
-                <option>HIGIENIZAÇÃO INTERNA</option>
-                <option>LAVAGEM TÉCNICA</option>
+                <option value="Polimento técnico">POLIMENTO TÉCNICO</option>
+                <option value="Vitrificação">VITRIFICAÇÃO</option>
+                <option value="Detalhamento automotivo">DETALHAMENTO AUTOMOTIVO</option>
+                <option value="Higienização interna">HIGIENIZAÇÃO INTERNA</option>
+                <option value="Lavagem técnica">LAVAGEM TÉCNICA</option>
                 </select>
             </div>
 
@@ -139,7 +139,7 @@ function startCalendar(){
       if(!busy){
         const btn = document.createElement('button'); btn.className='btn btn--primary'; btn.textContent='Agendar';
         btn.onclick = ()=>{
-          const service = encodeURIComponent(serviceSelect.value);
+          const service = serviceSelect.value;
           const msg = encodeURIComponent(`Olá, quero agendar o serviço ${service} em ${iso} às ${hh}. Por favor, confirmar disponibilidade com os técnicos.`);
           window.open(`https://wa.me/${WA_PHONE}?text=${msg}`, '_blank');
         };
