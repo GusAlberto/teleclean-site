@@ -1,7 +1,7 @@
 <header class="site-header" data-header>
     <div class="container site-header__inner">
         <a class="brand" href="/" aria-label="TeleClean - voltar ao início">
-            <span class="brand__wordmark">Teleclean</span>
+            <span class="brand__wordmark">Teleclean Detail</span>
         </a>
 
         <nav class="main-nav" aria-label="Navegação principal">
