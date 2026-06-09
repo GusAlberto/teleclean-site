@@ -290,6 +290,16 @@ include __DIR__ . '/includes/head.php';
                         <p>O ideal é enviar modelo, fotos e objetivo do serviço pelo WhatsApp para confirmar o melhor atendimento e o pacote mais adequado.</p>
                     </div>
                 </article>
+                <article class="faq-item reveal">
+                    <h3>
+                        <button type="button" aria-expanded="false" aria-controls="faq-6" id="faq-button-6">Quais são os contatos da empresa?</button>
+                    </h3>
+                    <div id="faq-6" role="region" aria-labelledby="faq-button-6" hidden>
+                        <p><strong>Telefone e WhatsApp:</strong> (31) 3568-3754</p>
+                        <p><strong>E-mail:</strong> contato@teleclean.com.br</p>
+                        <p><strong>PIX da empresa:</strong> contato@teleclean.com.br</p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -300,11 +310,6 @@ include __DIR__ . '/includes/head.php';
                 <span class="section__eyebrow">Orçamento e agendamento</span>
                 <h2>Seu veículo pode ter brilho de vitrine, proteção duradoura e acabamento que chama atenção.</h2>
                 <p>Envie fotos no WhatsApp e receba uma avaliacao tecnica da TeleClean com orientacao clara do melhor pacote para o seu objetivo.</p>
-                <ul class="cta-section__meta" role="list">
-                    <li><strong>Telefone e WhatsApp:</strong> (31) 3568-3754</li>
-                    <li><strong>E-mail:</strong> contato@teleclean.com.br</li>
-                    <li><strong>PIX da empresa:</strong> contato@teleclean.com.br</li>
-                </ul>
             </div>
             <div class="cta-section__actions">
                 <a class="btn btn--primary" href="https://wa.me/553135683754?text=Ol%C3%A1%2C%20quero%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
