@@ -180,12 +180,48 @@ include __DIR__ . '/includes/head.php';
                 <h2>Um padrão de atendimento pensado para confiança, técnica e resultado visual consistente.</h2>
             </div>
             <div class="benefits-grid">
-                <article class="benefit-card reveal"><h3>Equipe especializada</h3><p>Processos orientados por avaliação real do estado do veículo e pela escolha correta de cada serviço.</p></article>
-                <article class="benefit-card reveal"><h3>Atenção aos detalhes</h3><p>Acabamentos, frestas, áreas internas e superfícies recebem cuidado criterioso do início à entrega.</p></article>
-                <article class="benefit-card reveal"><h3>Produtos de qualidade</h3><p>Uso de linhas profissionais para limpeza, proteção e conservação, sempre com aplicação adequada.</p></article>
-                <article class="benefit-card reveal"><h3>Técnicas seguras</h3><p>Métodos pensados para preservar materiais, pintura, tecidos, couro, plásticos e componentes sensíveis.</p></article>
-                <article class="benefit-card reveal"><h3>Resultado visual superior</h3><p>Brilho controlado, aspecto limpo, sensação de renovação e apresentação mais valorizada.</p></article>
-                <article class="benefit-card reveal"><h3>Atendimento profissional</h3><p>Contato rápido, orientação objetiva, organização no agendamento e clareza sobre o melhor pacote.</p></article>
+                <article class="benefit-card reveal">
+                    <div class="icon-wrapper">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <h3>Equipe especializada</h3>
+                    <p>Processos orientados por avaliação real do estado do veículo e pela escolha correta de cada serviço.</p>
+                </article>
+                <article class="benefit-card reveal">
+                    <div class="icon-wrapper">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
+                    </div>
+                    <h3>Atenção aos detalhes</h3>
+                    <p>Acabamentos, frestas, áreas internas e superfícies recebem cuidado criterioso do início à entrega.</p>
+                </article>
+                <article class="benefit-card reveal">
+                    <div class="icon-wrapper">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    </div>
+                    <h3>Produtos de qualidade</h3>
+                    <p>Uso de linhas profissionais para limpeza, proteção e conservação, sempre com aplicação adequada.</p>
+                </article>
+                <article class="benefit-card reveal">
+                    <div class="icon-wrapper">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                    <h3>Técnicas seguras</h3>
+                    <p>Métodos pensados para preservar materiais, pintura, tecidos, couro, plásticos e componentes sensíveis.</p>
+                </article>
+                <article class="benefit-card reveal">
+                    <div class="icon-wrapper">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <h3>Resultado superior</h3>
+                    <p>Brilho controlado, aspecto limpo, sensação de renovação e apresentação mais valorizada.</p>
+                </article>
+                <article class="benefit-card reveal">
+                    <div class="icon-wrapper">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <h3>Atendimento Premium</h3>
+                    <p>Contato rápido, orientação objetiva, organização no agendamento e clareza total para o cliente.</p>
+                </article>
             </div>
         </div>
     </section>
