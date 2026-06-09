@@ -17,6 +17,7 @@
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-list" role="list">
+                <li><a href="/schedule.php">Agendar</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#diferenciais">Diferenciais</a></li>
                 <li><a href="#antes-depois">Antes e depois</a></li>
