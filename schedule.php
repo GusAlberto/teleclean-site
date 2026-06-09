@@ -19,12 +19,12 @@ include __DIR__ . '/includes/head.php';
         <div class="schedule-panel">
             <div class="schedule-controls">
                 <label for="service-select">Serviço</label>
-                <select id="service-select">
-                    <option>Polimento técnico</option>
-                    <option>Vitrificação</option>
-                    <option>Detalhamento automotivo</option>
-                    <option>Higienização interna</option>
-                    <option>Lavagem técnica</option>
+              <select id="service-select" class="schedule-select">
+                <option>POLIMENTO TÉCNICO</option>
+                <option>VITRIFICAÇÃO</option>
+                <option>DETALHAMENTO AUTOMOTIVO</option>
+                <option>HIGIENIZAÇÃO INTERNA</option>
+                <option>LAVAGEM TÉCNICA</option>
                 </select>
             </div>
 
