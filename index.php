@@ -16,7 +16,7 @@ include __DIR__ . '/includes/head.php';
         </video>
         <div class="hero__overlay" aria-hidden="true"></div>
         <div class="container hero__content">
-            <div class="eyebrow reveal">TeleClean | Estética Automotiva</div>
+            <div class="eyebrow reveal">TeleClean Detail | Estética Automotiva</div>
             <h1 class="reveal">Polimento técnico, vitrificação e detalhamento para deixar seu carro com acabamento de alto nível.</h1>
             <p class="hero__text reveal">A TeleClean atende em Belo Horizonte com processo técnico, transparência no diagnóstico e foco total em resultado visual. Seu veículo sai com mais brilho, proteção e valor percebido.</p>
             <div class="eyebrow reveal">Cuidado técnico • acabamento premium • atendimento local</div>
@@ -40,6 +40,7 @@ include __DIR__ . '/includes/head.php';
                 <span class="section__eyebrow">Serviços</span>
                 <h2>Tratamentos pensados para estética, conservação e valorização do veículo.</h2>
                 <p>Cada serviço foi descrito para facilitar a decisão do cliente e levá-lo direto ao contato comercial.</p>
+                <p class="services-summary">Na TeleClean, nossos serviços vão além da lavagem: oferecemos soluções completas de proteção e revitalização, seja para o dia a dia (Beginner) ou para um upgrade (Profissional). Destaques: Polimento técnico, Vitrificação, Guarnaminha e Clarixa. Também realizamos limpeza de motor e caixa de roda, tratamento de couro e higienização interna.</p>
             </div>
 
             <div class="carousel reveal" data-carousel aria-label="Carrossel de serviços">
