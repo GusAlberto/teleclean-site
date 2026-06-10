@@ -22,6 +22,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* Ajusta o scroll para que o conteúdo não fique escondido atrás do header fixo */
 }
 
 body {
@@ -93,6 +94,7 @@ a {
 
 .site-header__inner {
     min-height: 74px;
+    min-height: 60px; /* Diminui a espessura da nav bar */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -168,6 +170,7 @@ a {
     color: var(--muted);
     white-space: nowrap;
     padding: 0.5rem 0.15rem;
+    padding: 0.4rem 0.15rem; /* Ajusta o padding para a nova altura da nav bar */
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -192,6 +195,7 @@ a {
     top: 90px;
     z-index: 999;
     text-decoration: none;
+    text-decoration: none; /* Mantém a decoração para evitar sublinhado */
     width: 48px;
     height: 48px;
     display: flex;
@@ -204,6 +208,7 @@ a {
     border: 1px solid rgba(79, 227, 208, 0.3);
     border-right: none;
     border-radius: 12px 0 0 12px;
+    top: 75px; /* Ajusta a posição do botão flutuante para a nova altura do header */
     box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
@@ -318,6 +323,8 @@ a {
 .section--compact {
     padding-top: 4rem;
     padding-bottom: 4rem;
+    padding-top: 6rem; /* Aumenta o padding para dar mais espaço à seção de serviços */
+    padding-bottom: 6rem; /* Aumenta o padding para dar mais espaço à seção de serviços */
 }
 
 .section__heading {
@@ -373,6 +380,8 @@ a {
 .btn--nav {
     padding: 0.78rem 1.1rem;
     min-height: 48px;
+    padding: 0.6rem 1.1rem; /* Ajusta o padding para a nova altura da nav bar */
+    min-height: 40px; /* Ajusta a altura mínima para a nova altura da nav bar */
     display: none; /* Removido da navbar conforme solicitado */
     border: 1px solid rgba(79, 227, 208, 0.42);
     background:
