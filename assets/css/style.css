@@ -173,8 +173,7 @@ a {
 .floating-whatsapp {
     position: fixed;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 90px;
     z-index: 999;
     text-decoration: none;
     width: 48px;
@@ -1301,8 +1300,7 @@ a {
     .floating-whatsapp {
         right: 0;
         bottom: auto;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 90px;
         border-radius: 12px 0 0 12px;
         padding: 0;
         width: 46px;

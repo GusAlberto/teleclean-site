@@ -68,25 +68,24 @@ if (backToTop) {
 }
 
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const observer = new IntersectionObserver((entries) => {
+  // Configuração para disparar o efeito quando o elemento estiver um pouco mais visível
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px' // O elemento precisa estar 100px dentro da área visível
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Usar requestAnimationFrame para garantir que o navegador pinte o estado inicial
-        // antes de aplicar a classe 'is-visible', tornando a transição visível.
-        requestAnimationFrame(() => {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        });
+        entry.target.classList.add('is-visible');
+        // Uma vez visível, paramos de observar este elemento específico
+        observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, observerOptions);
 
-  // Atraso aumentado para garantir que o F5 não "pule" a animação inicial
-  window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-      reveals.forEach((item) => observer.observe(item));
-    }, 300); // Atraso de 300ms
-  });
+  // Inicia a observação imediatamente (o script já está com 'defer')
+  reveals.forEach((item) => observer.observe(item));
 } else {
   reveals.forEach((item) => item.classList.add('is-visible'));
 }
