@@ -43,8 +43,27 @@ const setHeaderState = () => {
   }
 };
 
-setHeaderState();
-window.addEventListener('scroll', setHeaderState, { passive: true });
+let scrollTimeout;
+const handleScroll = () => {
+  setHeaderState();
+  if (!header) return;
+
+  // Esconde a navbar se o usuário estiver rolando (e não estiver no topo)
+  if (window.scrollY > 20) {
+    header.classList.add('is-moving');
+
+    // Limpa o timer anterior e define um novo de 250ms
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      header.classList.remove('is-moving');
+    }, 1000); // Tempo para considerar que o usuário "parou" de rolar
+  } else {
+    header.classList.remove('is-moving');
+  }
+};
+
+handleScroll();
+window.addEventListener('scroll', handleScroll, { passive: true });
 
 if (navToggle && mobileMenu) {
   navToggle.addEventListener('click', () => {

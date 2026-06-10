@@ -77,12 +77,18 @@ a {
     background: rgba(11, 17, 23, 0.75);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid transparent;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
+    transition: border-color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 }
 
 .site-header.is-scrolled {
     border-color: var(--line);
     background: rgba(11, 17, 23, 0.9);
+}
+
+.site-header.is-moving {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
 }
 
 .site-header__inner {
