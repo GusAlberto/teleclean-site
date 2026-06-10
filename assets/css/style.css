@@ -280,9 +280,11 @@ a {
 }
 
 .hero__video {
-    width: 100%;
-    height: 120%; /* Aumenta a altura para permitir o movimento */
-    top: -10%;    /* Centraliza o vídeo excedente */
+    width: 130vmax; /* Garante que o vídeo cubra a largura mesmo rotacionado */
+    height: 130vmax; /* Garante que o vídeo cubra a altura mesmo rotacionado */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
     object-fit: cover;
     will-change: transform;
 }

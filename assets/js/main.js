@@ -39,7 +39,7 @@ const setHeaderState = () => {
 
   // Efeito Parallax Suave
   if (heroVideo && scrollY < window.innerHeight) {
-    heroVideo.style.transform = `translate3d(0, ${scrollY * 0.4}px, 0)`;
+    heroVideo.style.transform = `translate3d(-50%, calc(-50% + ${scrollY * 0.4}px), 0) rotate(90deg)`;
   }
 };
 
