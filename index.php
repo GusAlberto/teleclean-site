@@ -59,20 +59,21 @@ include __DIR__ . '/includes/head.php';
         <div class="hero__overlay" aria-hidden="true"></div>
         <div class="container hero__content">
             <div class="eyebrow reveal">TeleClean Detail | Estética Automotiva</div>
-            <h1 class="reveal">Polimento técnico, vitrificação e detalhamento para deixar seu carro com acabamento de alto nível.</h1>
+            <!-- <h1 class="reveal">Polimento técnico, vitrificação e detalhamento para deixar seu carro com acabamento de alto nível.</h1> -->
+            <h1 class="reveal">Estética automotiva premium</h1>
+            <!-- <h1 class="reveal">Estética automotiva premium para quem valoriza cada detalhe do veículo.</h1> -->
             <p class="hero__text reveal">Atendemos em Belo Horizonte com processo técnico, transparência no diagnóstico e foco total em resultado visual. Seu veículo sai com mais brilho, proteção e valor percebido.</p>
-            <div class="eyebrow reveal">Cuidado técnico • acabamento premium • atendimento local</div>
-            <h1 class="reveal">Estética automotiva premium para quem valoriza cada detalhe do veículo.</h1>
-            <p class="hero__text reveal">Lavagem técnica, higienização, polimento e proteção com padrão profissional, processo cuidadoso e atendimento com hora marcada em Belo Horizonte.</p>
+            <!-- <div class="eyebrow reveal">Cuidado técnico • acabamento premium • atendimento local</div> -->
+            <!-- <p class="hero__text reveal">Lavagem técnica, higienização, polimento e proteção com padrão profissional, processo cuidadoso e atendimento com hora marcada em Belo Horizonte.</p> -->
             <div class="hero__actions reveal">
                 <a class="btn btn--primary" href="#orcamento">Solicitar orçamento</a>
                 <a class="btn btn--ghost" href="https://wa.me/553135683754?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20para%20est%C3%A9tica%20automotiva." target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
             </div>
-            <ul class="hero__metrics" role="list">
+            <!-- <ul class="hero__metrics" role="list">
                 <li class="metric reveal"><strong>Hora marcada</strong><span>Atendimento organizado, sem pressa e com previsibilidade.</span></li>
                 <li class="metric reveal"><strong>Produtos profissionais</strong><span>Linhas selecionadas para limpeza, brilho e proteção.</span></li>
                 <li class="metric reveal"><strong>Acabamento premium</strong><span>Foco em detalhe visual, toque final e apresentação.</span></li>
-            </ul>
+            </ul> -->
         </div>
     </section>
 
@@ -179,13 +180,49 @@ include __DIR__ . '/includes/head.php';
                 <span class="section__eyebrow">Por que escolher</span>
                 <h2>Um padrão de atendimento pensado para confiança, técnica e resultado visual consistente.</h2>
             </div>
-            <div class="benefits-grid">
-                <article class="benefit-card reveal"><h3>Equipe especializada</h3><p>Processos orientados por avaliação real do estado do veículo e pela escolha correta de cada serviço.</p></article>
-                <article class="benefit-card reveal"><h3>Atenção aos detalhes</h3><p>Acabamentos, frestas, áreas internas e superfícies recebem cuidado criterioso do início à entrega.</p></article>
-                <article class="benefit-card reveal"><h3>Produtos de qualidade</h3><p>Uso de linhas profissionais para limpeza, proteção e conservação, sempre com aplicação adequada.</p></article>
-                <article class="benefit-card reveal"><h3>Técnicas seguras</h3><p>Métodos pensados para preservar materiais, pintura, tecidos, couro, plásticos e componentes sensíveis.</p></article>
-                <article class="benefit-card reveal"><h3>Resultado visual superior</h3><p>Brilho controlado, aspecto limpo, sensação de renovação e apresentação mais valorizada.</p></article>
-                <article class="benefit-card reveal"><h3>Atendimento profissional</h3><p>Contato rápido, orientação objetiva, organização no agendamento e clareza sobre o melhor pacote.</p></article>
+            <div class="benefits-grid reveal-group">
+                <article class="benefit-card reveal">
+                    <div class="icon-wrapper">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <h3>Equipe especializada</h3>
+                    <p>Processos orientados por avaliação real do estado do veículo e pela escolha correta de cada serviço.</p>
+                </article>
+                <article class="benefit-card reveal">
+                    <div class="icon-wrapper">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
+                    </div>
+                    <h3>Atenção aos detalhes</h3>
+                    <p>Acabamentos, frestas, áreas internas e superfícies recebem cuidado criterioso do início à entrega.</p>
+                </article>
+                <article class="benefit-card reveal">
+                    <div class="icon-wrapper">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    </div>
+                    <h3>Produtos de qualidade</h3>
+                    <p>Uso de linhas profissionais para limpeza, proteção e conservação, sempre com aplicação adequada.</p>
+                </article>
+                <article class="benefit-card reveal">
+                    <div class="icon-wrapper">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                    <h3>Técnicas seguras</h3>
+                    <p>Métodos pensados para preservar materiais, pintura, tecidos, couro, plásticos e componentes sensíveis.</p>
+                </article>
+                <article class="benefit-card reveal">
+                    <div class="icon-wrapper">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <h3>Resultado superior</h3>
+                    <p>Brilho controlado, aspecto limpo, sensação de renovação e apresentação mais valorizada.</p>
+                </article>
+                <article class="benefit-card reveal">
+                    <div class="icon-wrapper">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <h3>Atendimento Premium</h3>
+                    <p>Contato rápido, orientação objetiva, organização no agendamento e clareza total para o cliente.</p>
+                </article>
             </div>
         </div>
     </section>
@@ -197,7 +234,7 @@ include __DIR__ . '/includes/head.php';
                 <h2>Comparativos que mostram limpeza, recuperação visual e ganho de acabamento.</h2>
                 <p>Os exemplos abaixo ajudam o cliente a entender o tipo de transformação possível em pintura, interior e detalhes.</p>
             </div>
-            <div class="compare-grid">
+            <div class="compare-grid reveal-group">
                 <article class="compare-card reveal">
                     <div class="compare-card__media">
                         <figure>
@@ -236,7 +273,7 @@ include __DIR__ . '/includes/head.php';
                 <span class="section__eyebrow">Processo</span>
                 <h2>Um fluxo simples para orientar o cliente com clareza desde o primeiro contato.</h2>
             </div>
-            <div class="process-grid">
+            <div class="process-grid reveal-group">
                 <article class="process-step reveal"><span>01</span><h3>Análise do veículo</h3><p>A equipe entende o estado geral, o nível de uso e as prioridades do cliente.</p></article>
                 <article class="process-step reveal"><span>02</span><h3>Indicação do serviço</h3><p>É sugerido o pacote mais coerente para estética, higienização ou proteção.</p></article>
                 <article class="process-step reveal"><span>03</span><h3>Execução técnica</h3><p>O trabalho é realizado com método, organização e foco em acabamento superior.</p></article>
@@ -251,7 +288,7 @@ include __DIR__ . '/includes/head.php';
                 <span class="section__eyebrow">Depoimentos</span>
                 <h2 id="titulo-depoimentos">Clientes que procuram acabamento, confiança e atendimento profissional.</h2>
             </div>
-            <div class="testimonials-grid" itemscope itemtype="https://schema.org/ItemList">
+            <div class="testimonials-grid reveal-group" itemscope itemtype="https://schema.org/ItemList">
                 <article class="testimonial-card reveal" itemprop="itemListElement" itemscope itemtype="https://schema.org/Review">
                     <meta itemprop="position" content="1">
                     <p itemprop="reviewBody">“O carro voltou com outra apresentação. O atendimento foi objetivo, explicaram o processo e o acabamento ficou acima do que eu esperava.”</p>
@@ -277,7 +314,7 @@ include __DIR__ . '/includes/head.php';
                 <span class="section__eyebrow">Galeria</span>
                 <h2>Alguns ângulos do padrão visual que o cliente encontra no final do serviço.</h2>
             </div>
-            <div class="gallery-grid">
+            <div class="gallery-grid reveal-group">
                 <a class="gallery-item reveal" href="assets/img/gallery-01.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/img/gallery-01.jpg" alt="SUV preto com pintura brilhante em área interna da estética automotiva" width="520" height="520" loading="lazy" decoding="async"></a>
                 <a class="gallery-item reveal" href="assets/img/gallery-02.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/img/gallery-02.jpg" alt="Sedã prata com rodas limpas e acabamento externo refinado" width="520" height="520" loading="lazy" decoding="async"></a>
                 <a class="gallery-item reveal" href="assets/img/gallery-03.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/img/gallery-03.jpg" alt="Interior automotivo escuro com painel limpo e aspecto renovado" width="520" height="520" loading="lazy" decoding="async"></a>
@@ -326,6 +363,42 @@ include __DIR__ . '/includes/head.php';
     </section>
 </main>
 
-<?php include __DIR__ . '/includes/footer.php'; ?>
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer__grid">
+            <div class="footer-brand">
+                <div class="brand__wordmark" style="font-size: 1.4rem; margin-bottom: 1.5rem;">TELE CLEAN</div>
+                <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.6;">Especialistas em preservação e estética automotiva de alto padrão. Unindo técnica avançada e produtos de elite para resultados extraordinários.</p>
+            </div>
+            <div>
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="#servicos">Polimento Técnico</a></li>
+                    <li><a href="#servicos">Vitrificação</a></li>
+                    <li><a href="#servicos">Higienização Interna</a></li>
+                    <li><a href="#servicos">Lavagem Detalhada</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#antes-depois">Antes e Depois</a></li>
+                    <li><a href="#faq">Dúvidas</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contato e Localização</h4>
+                <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Rua Benjamim Flores, 170<br>Santo Antônio, Belo Horizonte</p>
+                <p style="color: var(--primary); font-weight: 700; font-size: 1rem;">(31) 3568-3754</p>
+            </div>
+        </div>
+        <div class="site-footer__bottom">
+            <p style="font-size: 0.75rem; color: var(--muted);">&copy; <?php echo date('Y'); ?> TeleClean Detail. Todos os direitos reservados.</p>
+            <button class="back-to-top" data-back-to-top>Voltar ao topo</button>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

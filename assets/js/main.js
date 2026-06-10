@@ -62,12 +62,23 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
+        // Usar requestAnimationFrame para garantir que o navegador pinte o estado inicial
+        // antes de aplicar a classe 'is-visible', tornando a transição visível.
+        requestAnimationFrame(() => {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
       }
     });
-  }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-  reveals.forEach((item) => observer.observe(item));
+  // Atrasar a observação ligeiramente para dar tempo ao navegador de renderizar o estado inicial
+  // para elementos que estão imediatamente na viewport ao carregar a página.
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      reveals.forEach((item) => observer.observe(item));
+    }, 100); // Atraso de 100ms
+  });
 } else {
   reveals.forEach((item) => item.classList.add('is-visible'));
 }
