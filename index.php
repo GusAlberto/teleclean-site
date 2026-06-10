@@ -402,7 +402,7 @@ include __DIR__ . '/includes/head.php';
             </div>
         </div>
         <div class="site-footer__bottom">
-            <p style="font-size: 0.75rem; color: var(--muted);">&copy; <?php echo date('Y'); ?> TeleClean Detail. Todos os direitos reservados.</p>
+            <p style="font-size: 0.75rem; color: var(--muted);">&copy; <?php echo date('Y'); ?> TeleClean Detail. Belo Horizonte - Minas Gerais. Todos os direitos reservados.</p>
             <button class="back-to-top" data-back-to-top>Voltar ao topo</button>
         </div>
     </div>
