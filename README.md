@@ -88,7 +88,6 @@ teleclean_site/
 `-- README.md
 ```
 
-> Importante: a pagina inicial possui seu rodape diretamente no final de `index.php`. A pagina `schedule.php` usa `includes/footer.php`. Para manter os dois rodapes iguais, altere ambos ou refatore a pagina inicial para incluir o componente compartilhado.
 
 ## Paginas e componentes
 
