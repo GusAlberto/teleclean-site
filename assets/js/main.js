@@ -35,7 +35,7 @@ const setHeaderState = () => {
   if (!header) return;
   const scrollY = window.scrollY;
   
-  header.classList.toggle('is-scrolled', scrollY > 12);
+  header.classList.toggle('is-scrolled', scrollY > 50);
 
   // Efeito Parallax Suave
   if (heroVideo && scrollY < window.innerHeight) {

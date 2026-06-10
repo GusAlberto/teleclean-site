@@ -72,18 +72,22 @@ a {
 }
 
 .site-header {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1000;
-    background: rgba(11, 17, 23, 0.75);
-    backdrop-filter: blur(12px);
+    background: transparent;
+    backdrop-filter: none;
     border-bottom: 1px solid transparent;
-    transition: border-color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 }
 
 .site-header.is-scrolled {
-    border-color: var(--line);
-    background: rgba(11, 17, 23, 0.9);
+    background: var(--bg);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .site-header.is-moving {
@@ -267,10 +271,11 @@ a {
 
 .hero {
     position: relative;
-    min-height: 120vh;
+    min-height: 100vh; /* Ajustado para 100% da tela */
     display: grid;
     align-items: center;
     overflow: hidden;
+    background: #060c11; /* Cor escura de fundo para evitar vazamento do verde do body */
 }
 
 .hero__video,
@@ -296,7 +301,7 @@ a {
 .hero__content {
     position: relative;
     z-index: 1;
-    padding: 4rem 0;
+    padding: 8rem 0 4rem; /* Aumentado o topo para o texto não ficar sob a Navbar */
 }
 
 .hero h1 {
@@ -356,6 +361,11 @@ a {
 
 .section {
     padding: 5rem 0;
+}
+
+/* Garante que em páginas sem Hero (como a Agenda), o conteúdo não comece escondido sob a Navbar */
+#conteudo > .section:first-of-type:not(.hero) {
+    padding-top: 100px;
 }
 
 .section--soft {
@@ -1354,13 +1364,19 @@ a {
     .nav-toggle {
         gap: 0.24rem;
         border: 1px solid var(--line);
-        background: #111a22;
+        background: transparent;
         width: 42px;
         height: 38px;
         border-radius: 10px;
         place-content: center;
         cursor: pointer;
         flex: 0 0 auto;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .is-scrolled .nav-toggle {
+        background: #111a22;
+        border-color: var(--line);
     }
 
     .nav-toggle span:not(.sr-only) {
