@@ -59,20 +59,21 @@ include __DIR__ . '/includes/head.php';
         <div class="hero__overlay" aria-hidden="true"></div>
         <div class="container hero__content">
             <div class="eyebrow reveal">TeleClean Detail | Estética Automotiva</div>
-            <h1 class="reveal">Polimento técnico, vitrificação e detalhamento para deixar seu carro com acabamento de alto nível.</h1>
+            <!-- <h1 class="reveal">Polimento técnico, vitrificação e detalhamento para deixar seu carro com acabamento de alto nível.</h1> -->
+            <h1 class="reveal">Estética automotiva premium</h1>
+            <!-- <h1 class="reveal">Estética automotiva premium para quem valoriza cada detalhe do veículo.</h1> -->
             <p class="hero__text reveal">Atendemos em Belo Horizonte com processo técnico, transparência no diagnóstico e foco total em resultado visual. Seu veículo sai com mais brilho, proteção e valor percebido.</p>
-            <div class="eyebrow reveal">Cuidado técnico • acabamento premium • atendimento local</div>
-            <h1 class="reveal">Estética automotiva premium para quem valoriza cada detalhe do veículo.</h1>
-            <p class="hero__text reveal">Lavagem técnica, higienização, polimento e proteção com padrão profissional, processo cuidadoso e atendimento com hora marcada em Belo Horizonte.</p>
+            <!-- <div class="eyebrow reveal">Cuidado técnico • acabamento premium • atendimento local</div> -->
+            <!-- <p class="hero__text reveal">Lavagem técnica, higienização, polimento e proteção com padrão profissional, processo cuidadoso e atendimento com hora marcada em Belo Horizonte.</p> -->
             <div class="hero__actions reveal">
                 <a class="btn btn--primary" href="#orcamento">Solicitar orçamento</a>
                 <a class="btn btn--ghost" href="https://wa.me/553135683754?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20para%20est%C3%A9tica%20automotiva." target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
             </div>
-            <ul class="hero__metrics" role="list">
+            <!-- <ul class="hero__metrics" role="list">
                 <li class="metric reveal"><strong>Hora marcada</strong><span>Atendimento organizado, sem pressa e com previsibilidade.</span></li>
                 <li class="metric reveal"><strong>Produtos profissionais</strong><span>Linhas selecionadas para limpeza, brilho e proteção.</span></li>
                 <li class="metric reveal"><strong>Acabamento premium</strong><span>Foco em detalhe visual, toque final e apresentação.</span></li>
-            </ul>
+            </ul> -->
         </div>
     </section>
 
