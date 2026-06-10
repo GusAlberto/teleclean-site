@@ -29,10 +29,20 @@ document.querySelectorAll('video').forEach((video) => {
   });
 });
 
+const heroVideo = document.querySelector('.hero__video');
+
 const setHeaderState = () => {
   if (!header) return;
-  header.classList.toggle('is-scrolled', window.scrollY > 12);
+  const scrollY = window.scrollY;
+  
+  header.classList.toggle('is-scrolled', scrollY > 12);
+
+  // Efeito Parallax Suave
+  if (heroVideo && scrollY < window.innerHeight) {
+    heroVideo.style.transform = `translate3d(0, ${scrollY * 0.4}px, 0)`;
+  }
 };
+
 setHeaderState();
 window.addEventListener('scroll', setHeaderState, { passive: true });
 
@@ -61,7 +71,6 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
         // Usar requestAnimationFrame para garantir que o navegador pinte o estado inicial
         // antes de aplicar a classe 'is-visible', tornando a transição visível.
         requestAnimationFrame(() => {
@@ -72,12 +81,11 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-  // Atrasar a observação ligeiramente para dar tempo ao navegador de renderizar o estado inicial
-  // para elementos que estão imediatamente na viewport ao carregar a página.
+  // Atraso aumentado para garantir que o F5 não "pule" a animação inicial
   window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       reveals.forEach((item) => observer.observe(item));
-    }, 100); // Atraso de 100ms
+    }, 300); // Atraso de 300ms
   });
 } else {
   reveals.forEach((item) => item.classList.add('is-visible'));
