@@ -113,10 +113,15 @@ a {
 }
 
 .brand__logo {
-    width: 100px;
-    height: 100px;
+    width: 80px; /* Tamanho inicial maior para visibilidade na Hero */
+    height: 80px;
     opacity: 0.85; /* Deixa o ícone pouco visível como solicitado */
-    transition: opacity 0.3s ease;
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+
+.site-header.is-scrolled .brand__logo {
+    width: 42px; /* Tamanho reduzido e compacto ao rolar a página */
+    height: 42px;
 }
 
 .brand:hover .brand__logo {
@@ -204,7 +209,7 @@ a {
     align-items: center;
     justify-content: center;
     padding: 0 1.5rem; /* px-md */
-    height: 25px;      /* h-9 */
+    height: 25px; 
     border: 1.5px solid rgba(255, 255, 255, 0.4); /* border-[1.5px] border-white/40 */
     border-radius: 9999px; /* rounded-full */
     font-size: 0.875rem;   /* text-label-md */
@@ -1324,12 +1329,14 @@ a {
         right: 0;
         left: auto;
         width: min(320px, calc(100vw - 2rem));
-        padding: 0.95rem;
-        background: #121c26;
-        border: 1px solid var(--line);
+        padding: 1.5rem;
+        background: var(--bg-soft);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 14px;
-        box-shadow: var(--shadow);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         z-index: 1001;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
     }
 
     .mobile-menu ul {
@@ -1337,7 +1344,7 @@ a {
         margin: 0;
         padding: 0;
         display: grid;
-        gap: 0.55rem;
+        gap: 1rem;
     }
 
     .mobile-menu a {
@@ -1347,6 +1354,15 @@ a {
         text-transform: uppercase;
         letter-spacing: 0.1em;
         font-weight: 700;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .mobile-menu .btn--primary {
+        background: var(--primary); /* Uso da cor da marca para contraste máximo */
+        color: #000;
+        border-bottom: none;
+        margin-top: 0.5rem;
     }
 
     .service-card--carousel {
@@ -1368,8 +1384,8 @@ a {
 
 @media (max-width: 760px) {
     .site-header__inner {
-        align-items: flex-start;
-        padding-top: 0.8rem;
+        align-items: center; /* Centralizado verticalmente */
+        padding-top: 0.5rem;
         padding-bottom: 0.8rem;
     }
 
