@@ -29,12 +29,41 @@ document.querySelectorAll('video').forEach((video) => {
   });
 });
 
+const heroVideo = document.querySelector('.hero__video');
+
 const setHeaderState = () => {
   if (!header) return;
-  header.classList.toggle('is-scrolled', window.scrollY > 12);
+  const scrollY = window.scrollY;
+  
+  header.classList.toggle('is-scrolled', scrollY > 12);
+
+  // Efeito Parallax Suave
+  if (heroVideo && scrollY < window.innerHeight) {
+    heroVideo.style.transform = `translate3d(0, ${scrollY * 0.4}px, 0)`;
+  }
 };
-setHeaderState();
-window.addEventListener('scroll', setHeaderState, { passive: true });
+
+let scrollTimeout;
+const handleScroll = () => {
+  setHeaderState();
+  if (!header) return;
+
+  // Esconde a navbar se o usuário estiver rolando (e não estiver no topo)
+  if (window.scrollY > 20) {
+    header.classList.add('is-moving');
+
+    // Limpa o timer anterior e define um novo de 250ms
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      header.classList.remove('is-moving');
+    }, 1000); // Tempo para considerar que o usuário "parou" de rolar
+  } else {
+    header.classList.remove('is-moving');
+  }
+};
+
+handleScroll();
+window.addEventListener('scroll', handleScroll, { passive: true });
 
 if (navToggle && mobileMenu) {
   navToggle.addEventListener('click', () => {
@@ -58,27 +87,24 @@ if (backToTop) {
 }
 
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const observer = new IntersectionObserver((entries) => {
+  // Configuração para disparar o efeito quando o elemento estiver um pouco mais visível
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px' // O elemento precisa estar 100px dentro da área visível
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        // Usar requestAnimationFrame para garantir que o navegador pinte o estado inicial
-        // antes de aplicar a classe 'is-visible', tornando a transição visível.
-        requestAnimationFrame(() => {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        });
+        // Uma vez visível, paramos de observar este elemento específico
+        observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, observerOptions);
 
-  // Atrasar a observação ligeiramente para dar tempo ao navegador de renderizar o estado inicial
-  // para elementos que estão imediatamente na viewport ao carregar a página.
-  window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-      reveals.forEach((item) => observer.observe(item));
-    }, 100); // Atraso de 100ms
-  });
+  // Inicia a observação imediatamente (o script já está com 'defer')
+  reveals.forEach((item) => observer.observe(item));
 } else {
   reveals.forEach((item) => item.classList.add('is-visible'));
 }
