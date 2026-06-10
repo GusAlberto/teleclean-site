@@ -179,7 +179,7 @@ include __DIR__ . '/includes/head.php';
                 <span class="section__eyebrow">Por que escolher</span>
                 <h2>Um padrão de atendimento pensado para confiança, técnica e resultado visual consistente.</h2>
             </div>
-            <div class="benefits-grid">
+            <div class="benefits-grid reveal-group">
                 <article class="benefit-card reveal">
                     <div class="icon-wrapper">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
@@ -233,7 +233,7 @@ include __DIR__ . '/includes/head.php';
                 <h2>Comparativos que mostram limpeza, recuperação visual e ganho de acabamento.</h2>
                 <p>Os exemplos abaixo ajudam o cliente a entender o tipo de transformação possível em pintura, interior e detalhes.</p>
             </div>
-            <div class="compare-grid">
+            <div class="compare-grid reveal-group">
                 <article class="compare-card reveal">
                     <div class="compare-card__media">
                         <figure>
@@ -272,7 +272,7 @@ include __DIR__ . '/includes/head.php';
                 <span class="section__eyebrow">Processo</span>
                 <h2>Um fluxo simples para orientar o cliente com clareza desde o primeiro contato.</h2>
             </div>
-            <div class="process-grid">
+            <div class="process-grid reveal-group">
                 <article class="process-step reveal"><span>01</span><h3>Análise do veículo</h3><p>A equipe entende o estado geral, o nível de uso e as prioridades do cliente.</p></article>
                 <article class="process-step reveal"><span>02</span><h3>Indicação do serviço</h3><p>É sugerido o pacote mais coerente para estética, higienização ou proteção.</p></article>
                 <article class="process-step reveal"><span>03</span><h3>Execução técnica</h3><p>O trabalho é realizado com método, organização e foco em acabamento superior.</p></article>
@@ -287,7 +287,7 @@ include __DIR__ . '/includes/head.php';
                 <span class="section__eyebrow">Depoimentos</span>
                 <h2 id="titulo-depoimentos">Clientes que procuram acabamento, confiança e atendimento profissional.</h2>
             </div>
-            <div class="testimonials-grid" itemscope itemtype="https://schema.org/ItemList">
+            <div class="testimonials-grid reveal-group" itemscope itemtype="https://schema.org/ItemList">
                 <article class="testimonial-card reveal" itemprop="itemListElement" itemscope itemtype="https://schema.org/Review">
                     <meta itemprop="position" content="1">
                     <p itemprop="reviewBody">“O carro voltou com outra apresentação. O atendimento foi objetivo, explicaram o processo e o acabamento ficou acima do que eu esperava.”</p>
@@ -313,7 +313,7 @@ include __DIR__ . '/includes/head.php';
                 <span class="section__eyebrow">Galeria</span>
                 <h2>Alguns ângulos do padrão visual que o cliente encontra no final do serviço.</h2>
             </div>
-            <div class="gallery-grid">
+            <div class="gallery-grid reveal-group">
                 <a class="gallery-item reveal" href="assets/img/gallery-01.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/img/gallery-01.jpg" alt="SUV preto com pintura brilhante em área interna da estética automotiva" width="520" height="520" loading="lazy" decoding="async"></a>
                 <a class="gallery-item reveal" href="assets/img/gallery-02.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/img/gallery-02.jpg" alt="Sedã prata com rodas limpas e acabamento externo refinado" width="520" height="520" loading="lazy" decoding="async"></a>
                 <a class="gallery-item reveal" href="assets/img/gallery-03.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/img/gallery-03.jpg" alt="Interior automotivo escuro com painel limpo e aspecto renovado" width="520" height="520" loading="lazy" decoding="async"></a>

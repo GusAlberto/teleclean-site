@@ -1112,14 +1112,23 @@ a {
 
 .reveal {
     opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(30px);
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
 }
 
 .reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Efeito cascata (stagger) para elementos dentro de um grupo reveal */
+.reveal-group > .reveal:nth-child(2) { transition-delay: 0.1s; }
+.reveal-group > .reveal:nth-child(3) { transition-delay: 0.2s; }
+.reveal-group > .reveal:nth-child(4) { transition-delay: 0.3s; }
+.reveal-group > .reveal:nth-child(5) { transition-delay: 0.4s; }
+.reveal-group > .reveal:nth-child(6) { transition-delay: 0.5s; }
 
 .mobile-menu {
     display: none;
