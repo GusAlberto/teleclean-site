@@ -179,6 +179,49 @@ a {
     color: var(--text);
 }
 
+.nav-list .nav-schedule {
+    font-family: inherit;
+    color: #e8edf0;
+    background: linear-gradient(
+        110deg,
+        #aeb7bd 0%,
+        #c5cdd2 42%,
+        #ffffff 48%,
+        #ffffff 52%,
+        #c5cdd2 58%,
+        #aeb7bd 100%
+    );
+    background-size: 300% 100%;
+    background-position: 150% 0;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 3px rgba(238, 245, 248, 0.24));
+    animation: nav-silver-shimmer 2.8s ease-in-out infinite;
+}
+
+.nav-list .nav-schedule:hover {
+    filter: drop-shadow(0 0 7px rgba(244, 249, 251, 0.58));
+}
+
+@keyframes nav-silver-shimmer {
+    0%, 48%, 100% {
+        background-position: 150% 0;
+    }
+    76% {
+        background-position: -50% 0;
+        filter: drop-shadow(0 0 6px rgba(244, 249, 251, 0.5));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nav-list .nav-schedule {
+        animation: none;
+        background-position: 50% 0;
+    }
+}
+
 .nav-toggle {
     display: none;
 }
