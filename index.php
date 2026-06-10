@@ -58,7 +58,7 @@ include __DIR__ . '/includes/head.php';
         </video>
         <div class="hero__overlay" aria-hidden="true"></div>
         <div class="container hero__content">
-            <div class="eyebrow reveal">TeleClean Detail | Estética Automotiva</div>
+            <!-- <div class="eyebrow reveal">TeleClean Detail | Estética Automotiva</div> -->
             <!-- <h1 class="reveal">Polimento técnico, vitrificação e detalhamento para deixar seu carro com acabamento de alto nível.</h1> -->
             <h1 class="reveal">Estética automotiva premium</h1>
             <!-- <h1 class="reveal">Estética automotiva premium para quem valoriza cada detalhe do veículo.</h1> -->

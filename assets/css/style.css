@@ -22,6 +22,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* Ajusta o scroll para que o conteúdo não fique escondido atrás do header fixo */
 }
 
 body {
@@ -92,7 +93,7 @@ a {
 }
 
 .site-header__inner {
-    min-height: 74px;
+    min-height: 60px; /* Diminui a espessura da nav bar */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -167,7 +168,7 @@ a {
     text-decoration: none;
     color: var(--muted);
     white-space: nowrap;
-    padding: 0.5rem 0.15rem;
+    padding: 0.4rem 0.15rem; /* Ajusta o padding para a nova altura da nav bar */
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -176,6 +177,49 @@ a {
 
 .nav-list a:hover {
     color: var(--text);
+}
+
+.nav-list .nav-schedule {
+    font-family: inherit;
+    color: #e8edf0;
+    background: linear-gradient(
+        110deg,
+        #aeb7bd 0%,
+        #c5cdd2 42%,
+        #ffffff 48%,
+        #ffffff 52%,
+        #c5cdd2 58%,
+        #aeb7bd 100%
+    );
+    background-size: 300% 100%;
+    background-position: 150% 0;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 3px rgba(238, 245, 248, 0.24));
+    animation: nav-silver-shimmer 2.8s ease-in-out infinite;
+}
+
+.nav-list .nav-schedule:hover {
+    filter: drop-shadow(0 0 7px rgba(244, 249, 251, 0.58));
+}
+
+@keyframes nav-silver-shimmer {
+    0%, 48%, 100% {
+        background-position: 150% 0;
+    }
+    76% {
+        background-position: -50% 0;
+        filter: drop-shadow(0 0 6px rgba(244, 249, 251, 0.5));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nav-list .nav-schedule {
+        animation: none;
+        background-position: 50% 0;
+    }
 }
 
 .nav-toggle {
@@ -191,7 +235,7 @@ a {
     right: 0;
     top: 90px;
     z-index: 999;
-    text-decoration: none;
+    text-decoration: none; /* Mantém a decoração para evitar sublinhado */
     width: 48px;
     height: 48px;
     display: flex;
@@ -204,6 +248,7 @@ a {
     border: 1px solid rgba(79, 227, 208, 0.3);
     border-right: none;
     border-radius: 12px 0 0 12px;
+    top: 75px; /* Ajusta a posição do botão flutuante para a nova altura do header */
     box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
@@ -222,7 +267,7 @@ a {
 
 .hero {
     position: relative;
-    min-height: 86vh;
+    min-height: 120vh;
     display: grid;
     align-items: center;
     overflow: hidden;
@@ -235,9 +280,11 @@ a {
 }
 
 .hero__video {
-    width: 100%;
-    height: 120%; /* Aumenta a altura para permitir o movimento */
-    top: -10%;    /* Centraliza o vídeo excedente */
+    width: 130vmax; /* Garante que o vídeo cubra a largura mesmo rotacionado */
+    height: 130vmax; /* Garante que o vídeo cubra a altura mesmo rotacionado */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
     object-fit: cover;
     will-change: transform;
 }
@@ -316,8 +363,8 @@ a {
 }
 
 .section--compact {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 6rem; /* Aumenta o padding para dar mais espaço à seção de serviços */
+    padding-bottom: 6rem; /* Aumenta o padding para dar mais espaço à seção de serviços */
 }
 
 .section__heading {
@@ -371,8 +418,8 @@ a {
 }
 
 .btn--nav {
-    padding: 0.78rem 1.1rem;
-    min-height: 48px;
+    padding: 0.6rem 1.1rem; /* Ajusta o padding para a nova altura da nav bar */
+    min-height: 40px; /* Ajusta a altura mínima para a nova altura da nav bar */
     display: none; /* Removido da navbar conforme solicitado */
     border: 1px solid rgba(79, 227, 208, 0.42);
     background:
@@ -381,6 +428,7 @@ a {
     color: var(--primary);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(79, 227, 208, 0.08) inset;
     white-space: nowrap;
+    opacity: 0.3;
 }
 
 .btn--primary:hover {
