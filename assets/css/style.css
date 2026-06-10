@@ -271,7 +271,7 @@ a {
 
 .hero {
     position: relative;
-    min-height: 100vh; /* Ajustado para 100% da tela */
+    min-height: 120vh; /* Aumentado para dar mais "tempo" de scroll com parallax */
     display: grid;
     align-items: center;
     overflow: hidden;
@@ -285,10 +285,12 @@ a {
 }
 
 .hero__video {
-    width: 130vmax; /* Garante que o vídeo cubra a largura mesmo rotacionado */
-    height: 130vmax; /* Garante que o vídeo cubra a altura mesmo rotacionado */
+    width: 160vmax; /* Aumentado para permitir maior deslocamento sem bordas */
+    height: 160vmax; /* Aumentado para permitir maior deslocamento sem bordas */
     top: 50%;
     left: 50%;
+    bottom: auto;
+    right: auto;
     transform: translate(-50%, -50%) rotate(90deg);
     object-fit: cover;
     will-change: transform;

@@ -32,14 +32,15 @@ document.querySelectorAll('video').forEach((video) => {
 const heroVideo = document.querySelector('.hero__video');
 
 const setHeaderState = () => {
-  if (!header) return;
   const scrollY = window.scrollY;
   
-  header.classList.toggle('is-scrolled', scrollY > 50);
+  if (header) {
+    header.classList.toggle('is-scrolled', scrollY > 50);
+  }
 
-  // Efeito Parallax Suave
-  if (heroVideo && scrollY < window.innerHeight) {
-    heroVideo.style.transform = `translate3d(-50%, calc(-50% + ${scrollY * 0.4}px), 0) rotate(90deg)`;
+  // Efeito Parallax Suave - Aumentado o fator para 0.6 para ser mais perceptível
+  if (heroVideo && scrollY < (window.innerHeight * 1.5)) {
+    heroVideo.style.transform = `translate3d(-50%, calc(-50% + ${scrollY * 0.6}px), 0) rotate(90deg)`;
   }
 };
 
