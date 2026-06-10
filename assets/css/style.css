@@ -383,6 +383,7 @@ a {
     color: var(--primary);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(79, 227, 208, 0.08) inset;
     white-space: nowrap;
+    opacity: 0.3;
 }
 
 .btn--primary:hover {
