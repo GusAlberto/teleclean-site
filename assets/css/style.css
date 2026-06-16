@@ -72,18 +72,22 @@ a {
 }
 
 .site-header {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1000;
-    background: rgba(11, 17, 23, 0.75);
-    backdrop-filter: blur(12px);
+    background: transparent;
+    backdrop-filter: none;
     border-bottom: 1px solid transparent;
-    transition: border-color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 }
 
 .site-header.is-scrolled {
-    border-color: var(--line);
-    background: rgba(11, 17, 23, 0.9);
+    background: var(--bg);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .site-header.is-moving {
@@ -103,9 +107,25 @@ a {
 .brand {
     display: inline-flex;
     align-items: center;
-    gap: 0.7rem;
+    gap: 0.4rem;
     text-decoration: none;
     font-weight: 700;
+}
+
+.brand__logo {
+    width: 80px; /* Tamanho inicial maior para visibilidade na Hero */
+    height: 80px;
+    opacity: 0.85; /* Deixa o ícone pouco visível como solicitado */
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+
+.site-header.is-scrolled .brand__logo {
+    width: 42px; /* Tamanho reduzido e compacto ao rolar a página */
+    height: 42px;
+}
+
+.brand:hover .brand__logo {
+    opacity: 0.7; /* Aumenta um pouco a visibilidade ao passar o mouse */
 }
 
 /* 
@@ -122,7 +142,7 @@ a {
     min-height: 36px;
     position: relative;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 900;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -151,7 +171,7 @@ a {
 
 .nav-list {
     display: flex;
-    gap: 1.05rem;
+    gap: 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -161,6 +181,11 @@ a {
 
 .nav-list li {
     flex: 0 0 auto;
+}
+
+/* Separa o botão AGENDAR do restante do menu, alinhando-o à direita do container */
+.nav-list li:last-child {
+    margin-left: 1.5rem;
 }
 
 .nav-list a {
@@ -180,39 +205,33 @@ a {
 }
 
 .nav-list .nav-schedule {
-    font-family: inherit;
-    color: #e8edf0;
-    background: linear-gradient(
-        110deg,
-        #aeb7bd 0%,
-        #c5cdd2 42%,
-        #ffffff 48%,
-        #ffffff 52%,
-        #c5cdd2 58%,
-        #aeb7bd 100%
-    );
-    background-size: 300% 100%;
-    background-position: 150% 0;
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 3px rgba(238, 245, 248, 0.24));
-    animation: nav-silver-shimmer 2.8s ease-in-out infinite;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem; /* px-md */
+    height: 25px; 
+    border: 1.5px solid rgba(255, 255, 255, 0.4); /* border-[1.5px] border-white/40 */
+    border-radius: 9999px; /* rounded-full */
+    font-size: 0.875rem;   /* text-label-md */
+    font-weight: 600;      /* font-label-md */
+    color: var(--primary); /* text-primary */
+    background: transparent;
+    transition: all 0.2s ease; /* transition-all duration-200 */
+    text-decoration: none;
+    animation: none; /* Remove shimmer anterior */
+    -webkit-text-fill-color: initial;
+    background-clip: initial;
+    background: rgba(255, 255, 255, 0.1); /* hover:bg-white/10 */
+    border-color: rgba(255, 255, 255, 0.6);
 }
 
-.nav-list .nav-schedule:hover {
-    filter: drop-shadow(0 0 7px rgba(244, 249, 251, 0.58));
+.nav-list .nav-schedule {
+    background: rgba(255, 255, 255, 0.1); /* hover:bg-white/10 */
+    border-color: rgba(255, 255, 255, 0.6);
 }
 
-@keyframes nav-silver-shimmer {
-    0%, 48%, 100% {
-        background-position: 150% 0;
-    }
-    76% {
-        background-position: -50% 0;
-        filter: drop-shadow(0 0 6px rgba(244, 249, 251, 0.5));
-    }
+.nav-list .nav-schedule:active {
+    transform: scale(0.95); /* active:scale-95 */
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -267,10 +286,11 @@ a {
 
 .hero {
     position: relative;
-    min-height: 120vh;
+    min-height: 120vh; /* Aumentado para dar mais "tempo" de scroll com parallax */
     display: grid;
     align-items: center;
     overflow: hidden;
+    background: #060c11; /* Cor escura de fundo para evitar vazamento do verde do body */
 }
 
 .hero__video,
@@ -280,10 +300,12 @@ a {
 }
 
 .hero__video {
-    width: 130vmax; /* Garante que o vídeo cubra a largura mesmo rotacionado */
-    height: 130vmax; /* Garante que o vídeo cubra a altura mesmo rotacionado */
+    width: 160vmax; /* Aumentado para permitir maior deslocamento sem bordas */
+    height: 160vmax; /* Aumentado para permitir maior deslocamento sem bordas */
     top: 50%;
     left: 50%;
+    bottom: auto;
+    right: auto;
     transform: translate(-50%, -50%) rotate(90deg);
     object-fit: cover;
     will-change: transform;
@@ -296,7 +318,7 @@ a {
 .hero__content {
     position: relative;
     z-index: 1;
-    padding: 4rem 0;
+    padding: 8rem 0 4rem; /* Aumentado o topo para o texto não ficar sob a Navbar */
 }
 
 .hero h1 {
@@ -356,6 +378,11 @@ a {
 
 .section {
     padding: 5rem 0;
+}
+
+/* Garante que em páginas sem Hero (como a Agenda), o conteúdo não comece escondido sob a Navbar */
+#conteudo > .section:first-of-type:not(.hero) {
+    padding-top: 100px;
 }
 
 .section--soft {
@@ -1302,12 +1329,14 @@ a {
         right: 0;
         left: auto;
         width: min(320px, calc(100vw - 2rem));
-        padding: 0.95rem;
-        background: #121c26;
-        border: 1px solid var(--line);
+        padding: 1.5rem;
+        background: var(--bg-soft);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 14px;
-        box-shadow: var(--shadow);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         z-index: 1001;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
     }
 
     .mobile-menu ul {
@@ -1315,7 +1344,7 @@ a {
         margin: 0;
         padding: 0;
         display: grid;
-        gap: 0.55rem;
+        gap: 1rem;
     }
 
     .mobile-menu a {
@@ -1325,6 +1354,15 @@ a {
         text-transform: uppercase;
         letter-spacing: 0.1em;
         font-weight: 700;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .mobile-menu .btn--primary {
+        background: var(--primary); /* Uso da cor da marca para contraste máximo */
+        color: #000;
+        border-bottom: none;
+        margin-top: 0.5rem;
     }
 
     .service-card--carousel {
@@ -1346,21 +1384,27 @@ a {
 
 @media (max-width: 760px) {
     .site-header__inner {
-        align-items: flex-start;
-        padding-top: 0.8rem;
+        align-items: center; /* Centralizado verticalmente */
+        padding-top: 0.5rem;
         padding-bottom: 0.8rem;
     }
 
     .nav-toggle {
         gap: 0.24rem;
         border: 1px solid var(--line);
-        background: #111a22;
+        background: transparent;
         width: 42px;
         height: 38px;
         border-radius: 10px;
         place-content: center;
         cursor: pointer;
         flex: 0 0 auto;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .is-scrolled .nav-toggle {
+        background: #111a22;
+        border-color: var(--line);
     }
 
     .nav-toggle span:not(.sr-only) {
