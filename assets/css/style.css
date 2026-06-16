@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 :root {
     --bg: #0b1117;
     --bg-soft: #121b24;
@@ -221,11 +219,6 @@ a {
     animation: none; /* Remove shimmer anterior */
     -webkit-text-fill-color: initial;
     background-clip: initial;
-    background: rgba(255, 255, 255, 0.1); /* hover:bg-white/10 */
-    border-color: rgba(255, 255, 255, 0.6);
-}
-
-.nav-list .nav-schedule {
     background: rgba(255, 255, 255, 0.1); /* hover:bg-white/10 */
     border-color: rgba(255, 255, 255, 0.6);
 }

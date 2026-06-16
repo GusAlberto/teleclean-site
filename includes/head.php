@@ -10,6 +10,14 @@ $ogImage = $ogImage ?? 'assets/img/og-cover.jpg';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
+
+    <!-- Preload do recurso LCP (Imagem da Hero) -->
+    <link rel="preload" as="image" href="assets/img/hero-poster.jpg">
+    
+    <!-- Preconnect para fontes externas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <meta name="description" content="<?php echo htmlspecialchars($pageDescription, ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="keywords" content="estética automotiva premium, higienização automotiva, polimento técnico, vitrificação, lavagem técnica, Belo Horizonte">
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -28,9 +36,11 @@ $ogImage = $ogImage ?? 'assets/img/og-cover.jpg';
     <meta name="twitter:image" content="<?php echo htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="theme-color" content="#0f1316">
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+
+    <!-- Fontes consolidadas para evitar render-blocking -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
     <script type="application/ld+json">

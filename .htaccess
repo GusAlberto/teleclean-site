@@ -1,0 +1,21 @@
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Cache padrão de 1 mês
+    ExpiresDefault "access plus 1 month"
+    
+    # Imagens e Vídeos (1 ano)
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType video/mp4 "access plus 1 year"
+    
+    # Fontes (1 ano)
+    ExpiresByType font/woff2 "access plus 1 year"
+    
+    # CSS e JS (1 mês)
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
