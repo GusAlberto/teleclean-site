@@ -1,0 +1,15 @@
+{
+  "builds": [
+    {
+      "src": "router.php",
+      "use": "vercel-php@0.7.2",
+      "config": {
+        "includeFiles": ["**/*.php", "includes/**", "data/**"]
+      }
+    }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/router.php" }
+  ]
+}
