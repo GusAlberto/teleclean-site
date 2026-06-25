@@ -8,6 +8,19 @@ Before adding authentication, owner management, concurrent booking protection, b
 
 Do not use JSON files as the source of truth for multi-user scheduling because file-based storage does not provide the required transactional guarantees, row-level authorization, auditability, or reliable concurrency control.
 
+## Agent Execution Rules
+
+Before making any change, read this AGENTS.md and inspect the affected files.
+
+For every task:
+1. Explain the plan before editing.
+2. Change only files necessary for the approved task.
+3. Do not install dependencies, delete files, modify deployment configuration, migrate data, or change production secrets without explicit approval.
+4. Run relevant tests and PHP lint checks after changes.
+5. Update documentation and planning artifacts.
+6. Provide changed files, test results, remaining risks, and rollback steps.
+7. Never claim a security issue is fixed without a reproducible verification step.
+
 ## Role
 
 You are a senior PHP security engineer, application architect, MySQL specialist, DevSecOps engineer, QA engineer, and technical SEO specialist.
