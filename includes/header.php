@@ -1,6 +1,7 @@
 <header class="site-header" data-header>
     <div class="container site-header__inner">
         <a class="brand" href="/" aria-label="TeleClean - voltar ao início">
+            <img src="assets/img/favicon-verde.svg" alt="" class="brand__logo">
             <span class="brand__wordmark">Teleclean Detail</span>
         </a>
 
@@ -9,14 +10,11 @@
                 <span class="sr-only">Abrir menu</span>
                 <span></span><span></span><span></span>
             </button>
-            <ul class="nav-list" role="list">
-                <li><a href="/schedule.php">Agendar</a></li>
+            <ul class="nav-list">
                 <li><a href="/#servicos">Serviços</a></li>
-                <li><a href="/#diferenciais">Diferenciais</a></li>
-                <li><a href="/#antes-depois">Antes e depois</a></li>
-                <li><a href="/#depoimentos">Depoimentos</a></li>
+                <li><a href="/#orcamento">Contatos</a></li>
                 <li><a href="/#faq">FAQ</a></li>
-                <li><a class="btn btn--nav" href="/#orcamento">Orçamento</a></li>
+                <li><a href="/schedule.php" class="nav-schedule">AGENDAR</a></li>
             </ul>
             <div class="mobile-menu" id="mobile-menu" hidden>
                 <ul role="list">

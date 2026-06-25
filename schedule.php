@@ -11,7 +11,6 @@ include __DIR__ . '/includes/head.php';
 <main class="container" id="conteudo">
     <section class="section">
         <div class="section__heading">
-            <span class="section__eyebrow">Agenda</span>
             <h1>Agende seu serviço</h1>
             <p>Escolha o serviço, selecione uma data e um horário disponível. Ao confirmar, será aberta uma mensagem no WhatsApp para finalizar o agendamento com nossa equipe.</p>
         </div>
