@@ -1,28 +1,13 @@
 {
-  "functions": {
-    "index.php": {
-      "runtime": "vercel-php@0.7.2"
-    },
-    "schedule.php": {
-      "runtime": "vercel-php@0.7.2"
-    },
-    "api/appointments.php": {
-      "runtime": "vercel-php@0.7.2"
-    }
-  },
-  "rewrites": [
-    { "source": "/",          "destination": "/index.php"              },
-    { "source": "/schedule",  "destination": "/schedule.php"           }
+  "builds": [
+    { "src": "index.php",            "use": "vercel-php@0.7.2" },
+    { "src": "schedule.php",         "use": "vercel-php@0.7.2" },
+    { "src": "api/appointments.php", "use": "vercel-php@0.7.2" }
   ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options",        "value": "DENY" },
-        { "key": "Referrer-Policy",        "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy",     "value": "camera=(), microphone=(), geolocation=()" }
-      ]
-    }
+  "routes": [
+    { "src": "^/$",                  "dest": "/index.php"              },
+    { "src": "/schedule",            "dest": "/schedule.php"           },
+    { "src": "/api/appointments",    "dest": "/api/appointments.php"   },
+    { "handle": "filesystem" }
   ]
 }
