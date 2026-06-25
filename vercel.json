@@ -1,13 +1,15 @@
 {
   "builds": [
-    { "src": "index.php",            "use": "vercel-php@0.7.2" },
-    { "src": "schedule.php",         "use": "vercel-php@0.7.2" },
-    { "src": "api/appointments.php", "use": "vercel-php@0.7.2" }
+    {
+      "src": "router.php",
+      "use": "vercel-php@0.7.2",
+      "config": {
+        "includeFiles": ["**/*.php", "includes/**", "data/**"]
+      }
+    }
   ],
   "routes": [
-    { "src": "^/$",                  "dest": "/index.php"              },
-    { "src": "/schedule",            "dest": "/schedule.php"           },
-    { "src": "/api/appointments",    "dest": "/api/appointments.php"   },
-    { "handle": "filesystem" }
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/router.php" }
   ]
 }
